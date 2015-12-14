@@ -1,3 +1,22 @@
+//COLOR PALLETE
+
+$blue--color: #4b9aea
+$blue-hover--color: #4481c0
+$blue-dark--color: #4080c1
+$blue-dark-hover--color: #3a6999
+
+$green--color: #4ec364
+$green-hover--color: #47ab5a
+$green-dark--color: #4aa65b
+$green-dark-hover--color: #4a9057
+
+$red--color: #d14c42
+$red-hover--color: #b94940
+$red-dark--color: #a4433b
+$red-dark-hover--color: #7c3a35
+
+//SASS
+
 h1, h2, h3
   letter-spacing: -0.1rem
 
@@ -66,7 +85,7 @@ h6
   position: relative
 
 \::-moz-selection, ::selection
-  background: #4b9aea
+  background: $blue--color
   color: #fff
 
 .sticky-nav nav.sticky
@@ -92,13 +111,6 @@ h6
     background-color: #888
   &.gray .muted, &.bg-gray .muted, &.grey .muted, &.bg-grey .muted, &.gray .text-muted, &.bg-gray .text-muted, &.grey .text-muted, &.bg-grey .text-muted
     color: #444
-
-a
-  text-decoration: none
-  padding-bottom: 1px
-  &.pseudo
-    text-decoration: none
-    padding-bottom: 1px
 
 .img-responsive, .responsiveimg
   display: block
@@ -140,16 +152,20 @@ p
   margin-top: 0
 
 a
-  color: #4b9aea
+  color: $blue--color
+  text-decoration: none
+  padding-bottom: 1px
   &:hover
-    color: #4481c0
+    color: $blue-hover--color
     cursor: pointer
   &.underline
-    border-bottom: 1px solid #4b9aea
+    border-bottom: 1px solid $blue--color
     &:hover
       border-bottom: 1px solid #222
   &.pseudo
     color: #fff
+    text-decoration: none
+    padding-bottom: 1px
     &:hover
       color: #fff
       opacity: 0.75
@@ -361,110 +377,110 @@ select.half
 .btn
   &.green, &.info
     color: #fff
-    background-color: #4ec364
-    border-color: #4aa65b
+    background-color: $green--color
+    border-color: $green-dark--color
     outline: 0
 
 .button
   &.green, &.info
     color: #fff
-    background-color: #4ec364
-    border-color: #4aa65b
+    background-color: $green--color
+    border-color: $green-dark--color
     outline: 0
 
 input[type=submit]
   color: #fff
-  background-color: #4ec364
-  border-color: #4aa65b
+  background-color: $green--color
+  border-color: $green-dark--color
   outline: 0
 
 .btn
   &.green
     &:focus, &:hover
       color: #fff
-      background-color: #47ab5a
-      border-color: #4a9057
+      background-color: $green-hover--color
+      border-color: $green-dark-hover--color
       outline: 0
   &.info
     &:focus, &:hover
       color: #fff
-      background-color: #47ab5a
-      border-color: #4a9057
+      background-color: $green-hover--color
+      border-color: $green-dark-hover--color
       outline: 0
 
 .button
   &.green
     &:focus, &:hover
       color: #fff
-      background-color: #47ab5a
-      border-color: #4a9057
+      background-color: $green-hover--color
+      border-color: $green-dark-hover--color
       outline: 0
   &.info
     &:focus, &:hover
       color: #fff
-      background-color: #47ab5a
-      border-color: #4a9057
+      background-color: $green-hover--color
+      border-color: $green-dark-hover--color
       outline: 0
 
 input[type=submit]
   &:focus, &:hover
     color: #fff
-    background-color: #47ab5a
-    border-color: #4a9057
+    background-color: $green-hover--color
+    border-color: $green-dark-hover--color
     outline: 0
 
 .btn
   &.error, &.red, &.warning
     color: #fff
-    background-color: #d14c42
-    border-color: #a4433b
+    background-color: $red--color
+    border-color: $red-hover--color
     outline: 0
 
 .button
   &.error, &.red, &.warning
     color: #fff
-    background-color: #d14c42
-    border-color: #a4433b
+    background-color: $red--color
+    border-color: $red-hover--color
     outline: 0
 
 .btn
   &.error
     &:focus, &:hover
       color: #fff
-      background-color: #b94940
-      border-color: #7c3a35
+      background-color: $red-dark--color
+      border-color: $red-dark-hover--color
       outline: 0
   &.red
     &:focus, &:hover
       color: #fff
-      background-color: #b94940
-      border-color: #7c3a35
+      background-color: $red-dark--color
+      border-color: $red-dark-hover--color
       outline: 0
   &.warning
     &:focus, &:hover
       color: #fff
-      background-color: #b94940
-      border-color: #7c3a35
+      background-color: $red-dark--color
+      border-color: $red-dark-hover--color
       outline: 0
 
 .button
   &.error
     &:focus, &:hover
       color: #fff
-      background-color: #b94940
-      border-color: #7c3a35
+      background-color: $red-dark--color
+      border-color: $red-dark-hover--color
       outline: 0
   &.red
     &:focus, &:hover
       color: #fff
-      background-color: #b94940
-      border-color: #7c3a35
+      background-color: $red-dark--color
+      border-color: $red-dark-hover--color
       outline: 0
   &.warning
     &:focus, &:hover
       color: #fff
-      background-color: #b94940
-      border-color: #7c3a35
+      background-color: $red-dark--color
+      border-color: $red-dark-hover--color
       outline: 0
 
 .btn.round, .button.round
@@ -477,8 +493,8 @@ input[type=submit]
   margin-right: .4rem
   margin-left: .4rem
   color: #FFF
-  background-color: #4b9aea
-  border-color: #4080c1
+  background-color: $blue--color
+  border-color: $blue-dark--color
 
 .btn.round > i, .button.round > i
   transform: translateY(-1.8rem)
@@ -489,8 +505,8 @@ input[type=submit]
   display: inline-block
 
 .btn.round:hover, .button.round:hover
-  background-color: #4481c0
-  border-color: #3a6999
+  background-color: $blue-hover--color
+  border-color: $blue-dark-hover--color
 
 div
   &.share, &.social
@@ -499,49 +515,49 @@ div
 
 .btn-primary, .btn.primary, .button-primary, .button.primary
   color: #FFF
-  background-color: #4b9aea
-  border-color: #4080c1
+  background-color: $blue--color
+  border-color: $blue-dark--color
 
 input
   &[type=btn].btn-primary, &[type=reset].btn-primary, &[type=submit].btn-primary
     color: #FFF
-    background-color: #4b9aea
-    border-color: #4080c1
+    background-color: $blue--color
+    border-color: $blue-dark--color
 
 .btn
   &.btn-primary
     &:focus, &:hover
       color: #FFF
-      background-color: #4481c0
-      border-color: #3a6999
+      background-color: $blue-hover--color
+      border-color: $blue-dark-hover--color
   &.primary
     &:focus, &:hover
       color: #FFF
-      background-color: #4481c0
-      border-color: #3a6999
+      background-color: $blue-hover--color
+      border-color: $blue-dark-hover--color
 
 .button.primary
   &:focus, &:hover
     color: #FFF
-    background-color: #4481c0
-    border-color: #3a6999
+    background-color: $blue-hover--color
+    border-color: $blue-dark-hover--color
 
 input
   &[type=btn].btn-primary
     &:focus, &:hover
       color: #FFF
-      background-color: #4481c0
-      border-color: #3a6999
+      background-color: $blue-hover--color
+      border-color: $blue-dark-hover--color
   &[type=reset].btn-primary
     &:focus, &:hover
       color: #FFF
-      background-color: #4481c0
-      border-color: #3a6999
+      background-color: $blue-hover--color
+      border-color: $blue-dark-hover--color
   &[type=submit].btn-primary
     &:focus, &:hover
       color: #FFF
-      background-color: #4481c0
-      border-color: #3a6999
+      background-color: $blue-hover--color
+      border-color: $blue-dark-hover--color
   &[type=email], &[type=number], &[type=password], &[type=search], &[type=tel], &[type=text], &[type=url]
     height: 38px
     padding: 6px 10px
@@ -576,11 +592,11 @@ textarea
 
 input
   &[type=email]:focus, &[type=number]:focus, &[type=password]:focus, &[type=search]:focus, &[type=tel]:focus, &[type=text]:focus, &[type=url]:focus
-    border: 1px solid #4b9aea
+    border: 1px solid $blue--color
     outline: 0
 
 select:focus, textarea:focus
-  border: 1px solid #4b9aea
+  border: 1px solid $blue--color
   outline: 0
 
 label, legend
