@@ -1,6 +1,6 @@
 # motus.css
 
-Using git.io/normalize
+Using http://git.io/normalize
 
 Download the css folder to your project and use the following code in the 'head' tag:
 
