@@ -1,3 +1,5 @@
+/* OUTDATED, PLEASE USE MOTUS.SASS OR MOTUS.MIN.CSS IN THE SASS DIRECTORY */
+
 h1,
 h2,
 h3 {
@@ -9,17 +11,14 @@ h6 {
     line-height: 1.5
 }
 
-body {
-    font-weight: 400
-}
-
 html {
-    font-size: 10px
+    font-size: 10px;
 }
 
 body {
-    font-size: 1.5rem;
-    font-family: Roboto, "Source sans pro", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: Roboto, "Roboto", "Source sans pro", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #222
 }
 
@@ -62,7 +61,7 @@ h5 {
 }
 
 h6 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     letter-spacing: 0
 }
 
@@ -83,7 +82,7 @@ h6 {
         font-size: 2.4rem
     }
     h6 {
-        font-size: 1.2rem
+        font-size: 1.6rem
     }
     .sticky-nav,
     nav.sticky {
@@ -736,7 +735,7 @@ ol ul,
 ul ol,
 ul ul {
     margin: 1.5rem 0 1.5rem 3rem;
-    font-size: 90%
+    font-size: 100%;
 }
 
 ul.inline li,
