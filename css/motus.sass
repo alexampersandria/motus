@@ -1,19 +1,13 @@
 //COLOR PALLETE
 
-$blue--color: #4b9aea
-$blue-hover--color: #4481c0
-$blue-dark--color: #4080c1
-$blue-dark-hover--color: #3a6999
+$blue--color: #00aaff
+$blue-hover--color: #288ccc
 
-$green--color: #4ec364
-$green-hover--color: #47ab5a
-$green-dark--color: #4aa65b
-$green-dark-hover--color: #4a9057
+$green--color: #5ebc4a
+$green-hover--color: #5b964e
 
-$red--color: #d14c42
-$red-hover--color: #b94940
-$red-dark--color: #a4433b
-$red-dark-hover--color: #7c3a35
+$red--color: #e74149
+$red-hover--color: #af4448
 
 //SASS
 
@@ -24,7 +18,7 @@ body, h6
   line-height: 1.5
 
 html
-  font-size: 10px
+  font-size: 12px
 
 body
   font-size: 1.2rem
@@ -297,11 +291,12 @@ a
     &.column, &.columns
       margin-left: 52%
 
-.btn, button
+.btn, button, input[type=btn], input[type=reset], input[type=submit]
   display: inline-block
   height: 38px
   padding: 0 30px
-  color: #555
+  color: #fff
+  background-color: #000
   text-align: center
   font-size: 1.2rem
   font-weight: 400
@@ -309,61 +304,20 @@ a
   letter-spacing: .1rem
   text-decoration: none
   white-space: nowrap
-  background-color: transparent
-  border-radius: .5rem
-  border: 1px solid #bbb
+  border-radius: 5px
+  border: none
   cursor: pointer
   box-sizing: border-box
-
-input
-  &[type=btn], &[type=reset], &[type=submit]
-    display: inline-block
-    height: 38px
-    padding: 0 30px
-    color: #555
-    text-align: center
-    font-size: 1.2rem
-    font-weight: 400
-    line-height: 38px
-    letter-spacing: .1rem
-    text-decoration: none
-    white-space: nowrap
-    background-color: transparent
-    border-radius: .5rem
-    border: 1px solid #bbb
-    cursor: pointer
-    box-sizing: border-box
 
 fieldset, hr
   border-width: 0
 
-.btn
+.btn, .button
   &:focus, &:hover
-    color: #83aee2
-    border-color: #83aee2
-    outline: 0
+    color: #fff
+    background-color: rgba(0, 0, 0, 0.5)
 
-.button
-  &:focus, &:hover
-    color: #83aee2
-    border-color: #83aee2
-    outline: 0
-
-input
-  &[type=btn]
-    &:focus, &:hover
-      color: #83aee2
-      border-color: #83aee2
-      outline: 0
-  &[type=reset]
-    &:focus, &:hover
-      color: #83aee2
-      border-color: #83aee2
-      outline: 0
-  &.half
-    width: 49.5%
-
-select.half
+select.half, input.half
   width: 49.5%
 
 @media (min-width: 550px)
@@ -374,59 +328,33 @@ select.half
   input.half, select.half
     width: 49.5%
 
-.btn
+.btn, .button
   &.green, &.info
     color: #fff
     background-color: $green--color
-    border-color: $green-dark--color
-    outline: 0
-
-.button
-  &.green, &.info
-    color: #fff
-    background-color: $green--color
-    border-color: $green-dark--color
     outline: 0
 
 input[type=submit]
   color: #fff
   background-color: $green--color
-  border-color: $green-dark--color
   outline: 0
 
-.btn
+.btn, .button
   &.green
     &:focus, &:hover
       color: #fff
       background-color: $green-hover--color
-      border-color: $green-dark-hover--color
       outline: 0
   &.info
     &:focus, &:hover
       color: #fff
       background-color: $green-hover--color
-      border-color: $green-dark-hover--color
-      outline: 0
-
-.button
-  &.green
-    &:focus, &:hover
-      color: #fff
-      background-color: $green-hover--color
-      border-color: $green-dark-hover--color
-      outline: 0
-  &.info
-    &:focus, &:hover
-      color: #fff
-      background-color: $green-hover--color
-      border-color: $green-dark-hover--color
       outline: 0
 
 input[type=submit]
   &:focus, &:hover
     color: #fff
     background-color: $green-hover--color
-    border-color: $green-dark-hover--color
     outline: 0
 
 .btn
@@ -443,44 +371,21 @@ input[type=submit]
     border-color: $red-hover--color
     outline: 0
 
-.btn
+.btn, .button
   &.error
     &:focus, &:hover
       color: #fff
-      background-color: $red-dark--color
-      border-color: $red-dark-hover--color
+      background-color: $red-hover--color
       outline: 0
   &.red
     &:focus, &:hover
       color: #fff
-      background-color: $red-dark--color
-      border-color: $red-dark-hover--color
+      background-color: $red-hover--color
       outline: 0
   &.warning
     &:focus, &:hover
       color: #fff
-      background-color: $red-dark--color
-      border-color: $red-dark-hover--color
-      outline: 0
-
-.button
-  &.error
-    &:focus, &:hover
-      color: #fff
-      background-color: $red-dark--color
-      border-color: $red-dark-hover--color
-      outline: 0
-  &.red
-    &:focus, &:hover
-      color: #fff
-      background-color: $red-dark--color
-      border-color: $red-dark-hover--color
-      outline: 0
-  &.warning
-    &:focus, &:hover
-      color: #fff
-      background-color: $red-dark--color
-      border-color: $red-dark-hover--color
+      background-color: $red-hover--color
       outline: 0
 
 .btn.round, .button.round
@@ -494,7 +399,6 @@ input[type=submit]
   margin-left: .4rem
   color: #FFF
   background-color: $blue--color
-  border-color: $blue-dark--color
 
 .btn.round > i, .button.round > i
   transform: translateY(-1.8rem)
@@ -506,64 +410,45 @@ input[type=submit]
 
 .btn.round:hover, .button.round:hover
   background-color: $blue-hover--color
-  border-color: $blue-dark-hover--color
 
 div
   &.share, &.social
     text-align: right
     padding-right: 1rem
 
-.btn-primary, .btn.primary, .button-primary, .button.primary
+.btn-primary, .btn.primary, .button-primary, .button.primary, input[type=btn].btn-primary, input[type=reset].btn-primary, input[type=submit].btn-primary
   color: #FFF
   background-color: $blue--color
-  border-color: $blue-dark--color
 
-input
-  &[type=btn].btn-primary, &[type=reset].btn-primary, &[type=submit].btn-primary
-    color: #FFF
-    background-color: $blue--color
-    border-color: $blue-dark--color
-
-.btn
+.btn, .button
   &.btn-primary
     &:focus, &:hover
       color: #FFF
       background-color: $blue-hover--color
-      border-color: $blue-dark-hover--color
   &.primary
     &:focus, &:hover
       color: #FFF
       background-color: $blue-hover--color
-      border-color: $blue-dark-hover--color
-
-.button.primary
-  &:focus, &:hover
-    color: #FFF
-    background-color: $blue-hover--color
-    border-color: $blue-dark-hover--color
 
 input
   &[type=btn].btn-primary
     &:focus, &:hover
       color: #FFF
       background-color: $blue-hover--color
-      border-color: $blue-dark-hover--color
   &[type=reset].btn-primary
     &:focus, &:hover
       color: #FFF
       background-color: $blue-hover--color
-      border-color: $blue-dark-hover--color
   &[type=submit].btn-primary
     &:focus, &:hover
       color: #FFF
       background-color: $blue-hover--color
-      border-color: $blue-dark-hover--color
   &[type=email], &[type=number], &[type=password], &[type=search], &[type=tel], &[type=text], &[type=url]
     height: 38px
     padding: 6px 10px
     background-color: #fff
     border: 1px solid #D1D1D1
-    border-radius: 4px
+    border-radius: 5px
     box-shadow: none
     box-sizing: border-box
 
@@ -572,7 +457,7 @@ select, textarea
   padding: 6px 10px
   background-color: #fff
   border: 1px solid #D1D1D1
-  border-radius: 4px
+  border-radius: 5px
   box-shadow: none
   box-sizing: border-box
 
@@ -611,7 +496,7 @@ blockquote
   margin-left: 0
   padding-left: 1.5rem
   line-height: 3rem
-  border-left: 0.4rem solid #eee
+  border-left: 5px solid #eee
 
 input
   &[type=checkbox], &[type=radio]
@@ -676,12 +561,6 @@ ul.muted li, .muted li, ul.muted-list li, .muted-list li
 .btn, btn, li
   margin-bottom: 1rem
 
-code
-  margin: 0 .2rem
-  font-size: 90%
-  white-space: nowrap
-  background: #F1F1F1
-
 .thin
   font-weight: 300
 
@@ -741,22 +620,37 @@ hr
   clear: both
 
 .card
-  border-radius: 0.5rem
-  border: 1px solid #ddd
+  border-radius: 5px
+  background-color: #fff
   padding: 4rem
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3)
+  padding-bottom: 2.5rem
   &.login-fix
     padding-bottom: 0.5rem
+  &.low
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2)
+  &.high
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.35)
 
 code, pre
   font-family: 'Source Code Pro'
-  background-color: #f2f2f2
   color: #888
-  border: 1px solid #e1e1e1
   padding: .5rem
-  border-radius: 0.5rem
+  background-color: #f7f7f7
+  border: none
+
+code
+  margin: 0 .2rem
+  border-radius: 5px
+  font-size: 90%
+  white-space: nowrap
 
 pre
   padding: 2rem
+  border-left: 5px #ddd solid
+  transition-duration: 0.5s
+  &:hover, .blue
+    border-left: 5px $blue--color solid
 
 .right
   text-align: right
@@ -766,3 +660,39 @@ pre
 
 .justify, .justify-p p
   text-align: justify
+
+.popup
+  width: 100%
+  height: 100%
+  display: none
+  position: fixed
+  top: 0px
+  left: 0px
+  background: rgba(0, 0, 0, 0.5)
+
+.popup-container
+  z-index: 9999
+  max-width: 960px
+  width: 90%
+  padding: 32px 40px 12px 40px
+  position: absolute
+  top: 50%
+  left: 50%
+  -webkit-transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%)
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3)
+  border-radius: 5px
+  background: #fff
+  p:last-child
+    margin-top: 32px
+  div
+    padding-bottom: 20px
+  div:last-child
+    padding: 32px 40px 31px 40px
+    background-color: #f7f7f7
+    width: calc(100% + 0px)
+    position: relative
+    left: -40px
+    bottom: -12px
+    border-bottom-left-radius: 5px
+    border-bottom-right-radius: 5px
