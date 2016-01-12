@@ -1,4 +1,6 @@
-# motus.css
+# motus
+
+![Motus UX](http://resources.ludvig.xyz/img/logo.png)
 
 Using http://git.io/normalize
 
