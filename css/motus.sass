@@ -9,6 +9,27 @@ $green-hover--color: #5b964e
 $red--color: #e74149
 $red-hover--color: #af4448
 
+$grid-columns: 12
+
+$grid-margin: 20px
+
+@for $i from 1 through $grid-columns
+  .grid-#{$i}
+    float: left
+    display: inline-block
+    width: 100%
+    background-color: $blue--color
+    min-height: 20px
+    padding: 0
+    margin: 0
+
+@media (min-width: 550px)
+  @for $i from 1 through $grid-columns
+      .grid-#{$i}
+        width: calc(100% / #{$grid-columns} * #{$i} - #{$grid-margin})
+        margin: calc(#{$grid-margin} / 2)
+
+
 //SASS
 
 h1, h2, h3
@@ -178,7 +199,7 @@ a
   width: 100%
   max-width: 960px
   margin: 0 auto
-  padding: 0 1.25rem
+  padding: 0 0
   box-sizing: border-box
 
 .padding-bottom, .pt
@@ -203,93 +224,6 @@ a
   width: 100%
   float: left
   box-sizing: border-box
-
-@media (min-width: 400px)
-  .container
-    width: 85%
-    padding: 0
-
-@media (min-width: 550px)
-  .container
-    width: 80%
-  .column, .columns
-    margin-left: 4%
-  .column:first-child, .columns:first-child
-    margin-left: 0
-  .one
-    &.column, &.columns
-      width: 4.66666%
-  .two.columns
-    width: 13.33333%
-  .three.columns
-    width: 22%
-  .four.columns
-    width: 30.66666%
-  .five.columns
-    width: 39.33333%
-  .six.columns
-    width: 48%
-  .seven.columns
-    width: 56.66666%
-  .eight.columns
-    width: 65.33333%
-  .nine.columns
-    width: 74%
-  .ten.columns
-    width: 82.66666%
-  .eleven.columns
-    width: 91.33333%
-  .twelve.columns
-    width: 100%
-    margin-left: 0
-  .one-third.column
-    width: 30.66666%
-  .two-thirds.column
-    width: 65.33333%
-  .one-half.column
-    width: 48%
-  .offset-by-one
-    &.column, &.columns
-      margin-left: 8.66666%
-  .offset-by-two
-    &.column, &.columns
-      margin-left: 17.33333%
-  .offset-by-three
-    &.column, &.columns
-      margin-left: 26%
-  .offset-by-four
-    &.column, &.columns
-      margin-left: 34.66666%
-  .offset-by-five
-    &.column, &.columns
-      margin-left: 43.33333%
-  .offset-by-six
-    &.column, &.columns
-      margin-left: 52%
-  .offset-by-seven
-    &.column, &.columns
-      margin-left: 60.66666%
-  .offset-by-eight
-    &.column, &.columns
-      margin-left: 69.33333%
-  .offset-by-nine
-    &.column, &.columns
-      margin-left: 78%
-  .offset-by-ten
-    &.column, &.columns
-      margin-left: 86.66666%
-  .offset-by-eleven
-    &.column, &.columns
-      margin-left: 95.33333%
-  .offset-by-one-third
-    &.column, &.columns
-      margin-left: 34.66666%
-  .offset-by-two-thirds
-    &.column, &.columns
-      margin-left: 69.33333%
-  .offset-by-one-half
-    &.column, &.columns
-      margin-left: 52%
 
 .btn, button, input[type=btn], input[type=reset], input[type=submit]
   display: inline-block
