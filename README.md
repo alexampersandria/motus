@@ -14,4 +14,5 @@ Now with more Sass variables to adjust grid width, column count and more with ea
 # docs
 
 [Official website](http://resources.ludvig.xyz/)
+
 [Docs](http://resources.ludvig.xyz/docs)
