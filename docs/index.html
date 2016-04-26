@@ -1,5 +1,7 @@
 
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +26,7 @@
   <!-- MOTUS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="http://resources.ludvig.xyz/normalize.css">
-    <link rel="stylesheet" href="../css/motus.min.css">
+    <link rel="stylesheet" href="../motus.css">
 
    <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -37,118 +39,106 @@
   <link href="http://www.ludvig.xyz/images/favicon.ico" rel="icon" />
   <link href="http://www.ludvig.xyz/images/favicon.png" sizes="192x192" rel="icon" />
 
-  <script>
-    $(window).load(function() {
-    $("body").removeClass("preload");
-    });
-  </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="../js/motus.js"></script>
-
 </head>
 <body>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+   <div class="container mt">
+      <div class="row">
+	    <div class="grid-12 center">
+            <h2>JavaScript resources coming soon!</h2>
+        </div>
+      </div>
+	</div>
+
   <div class="container mt">
-    <div class="row">
-    <div class="twelve columns center">
-        <h1><b>motus.css</b></h1>
-        <p>Fully responsive CSS framework for the modern web. Resize your browser to experience responsive magic!<br><span class="muted"><i class="fa fa-code"></i> with <i class="fa fa-heart-o"></i> in Denmark.</p></span>
-          <p><a class="btn primary" href="http://resources.ludvig.xyz/changelog">Changelog</a> &emsp;<a class="btn info" href="https://github.com/ludvigbruchmann/motus.css">View on GitHub</a></p>
+      <div class="row">
+	    <div class="grid-12 center">
+          <a href="http://ludvig.xyz/" class="btn"><i class="fa fa-chevron-left"></i> Back to ludvig.xyz</a>
+        </div>
+      </div>
+	</div>
+
+    <div class="container mt">
+      <div class="row">
+	    <div class="grid-12 center">
+          <h1><b>motus.css</b></h1>
+          <p>Fully responsive CSS framework for the modern web. Resize your browser to experience responsive magic!<br><span class="muted"><i class="fa fa-code"></i> with <i class="fa fa-heart-o"></i> in Denmark.</p></span>
+            <p><a class="btn primary" href="http://resources.ludvig.xyz/changelog">Changelog</a></p>
+        </div>
       </div>
     </div>
-  </div>
-
 
   <div class="container" id="load">
       <div class="row">
-	    <div class="twelve columns" style="margin-top: 6rem;">
-          <h2>Initialize motus</h2>
+	    <div class="grid-12" style="margin-top: 6rem;">
+          <h2>Initialize motus from <a href="http://resources.ludvig.xyz/">resources.ludvig.xyz</a></h2>
           <p>Put the following code in the <code>&lt;head&gt;</code> tag of your document to load motus.</p>
-		  <pre>&#60;&#109;&#101;&#116;&#97;&#32;&#110;&#97;&#109;&#101;&#61;&#34;&#118;&#105;&#101;&#119;&#112;&#111;&#114;&#116;&#34;&#32;&#99;&#111;&#110;&#116;&#101;&#110;&#116;&#61;&#34;&#119;&#105;&#100;&#116;&#104;&#61;&#100;&#101;&#118;&#105;&#99;&#101;&#45;&#119;&#105;&#100;&#116;&#104;&#44;&#32;&#105;&#110;&#105;&#116;&#105;&#97;&#108;&#45;&#115;&#99;&#97;&#108;&#101;&#61;&#49;&#34;&#62;
-&lt;link rel="stylesheet" href="css/normalize.css"&gt;<br>&lt;link rel="stylesheet" href="css/motus.min.css"&gt;</pre>
+		  <pre>&lt;link rel="stylesheet" href="http://resources.ludvig.xyz/normalize.css"&gt;<br>&lt;link rel="stylesheet" href="http://resources.ludvig.xyz/motus.min.css"&gt;</pre>
         </div>
       </div>
 	</div>
 
-    <div class="container" id="1280">
-      <div class="row">
-	    <div class="twelve columns" style="margin-top: 6rem;">
-          <h4>Motus grid @1280px wide</h4>
-          <p>Put the following code in the <code>&lt;head&gt;</code> tag of your document, after <code>motus.min.css</code> to load motus@1280.</p>
-		  <pre>&lt;link rel="stylesheet" href="css/motus@1280.min.css"&gt;</pre>
+    <div class="container mt" id="gridstructure">
+        <div class="row">
+        <div class="grid-12">
+            <h4 class="center">Grid structure</h4>
+            <pre>&lt;div class="container"&gt;<br/>&ensp; &lt;div class="row"&gt;<br/>&ensp; &ensp; &lt;div class="grid-12"&gt;<br/>&ensp; &ensp; &ensp; &lt;h2&gt;Heading&lt;/h2&gt;<br/>&ensp; &ensp; &ensp; &lt;p&gt;This is a text field&lt;/p&gt;<br/>&ensp; &ensp; &lt;/div&gt;<br/>&ensp; &lt;/div&gt;<br/>&lt;/div&gt;</pre>
+          </div>
         </div>
-      </div>
-	</div>
-
-  <div class="container mt" id="example">
-      <div class="row">
-	    <div class="twelve columns">
-          <h4 class="center">Grid structure</h4>
-          <pre>&lt;div class="container"&gt;<br/>&ensp; &lt;div class="row"&gt;<br/>&ensp; &ensp; &lt;div class="twelve columns"&gt;<br/>&ensp; &ensp; &ensp; &lt;h2&gt;Heading&lt;/h2&gt;<br/>&ensp; &ensp; &ensp; &lt;p&gt;This is a text field&lt;/p&gt;<br/>&ensp; &ensp; &lt;/div&gt;<br/>&ensp; &lt;/div&gt;<br/>&lt;/div&gt;</pre>
-        </div>
-      </div>
-	</div>
+    </div>
 
     <div class="container mt" id="grid">
       <div class="row">
-	    <div class="twelve columns center">
+	    <div class="grid-12 center">
           <h4>Grid showcase, numbers represent column width; 1-12</h4>
         </div>
       </div>
     </div>
     <div class="container">
       <div class="row">
-        <div class="six columns">
+        <div class="grid-6">
             <pre>6</pre>
         </div>
-        <div class="three columns">
+        <div class="grid-3">
             <pre>3</pre>
         </div>
-        <div class="two columns">
+        <div class="grid-2">
             <pre>2</pre>
         </div>
-        <div class="one columns">
+        <div class="grid-1">
             <pre>1</pre>
         </div>
       </div>
 	</div>
-    <div class="container">
-      <div class="row">
-        <div class="one-half offset-by-three column">
-            <pre>one-half, offset-by-three</pre>
-        </div>
-      </div>
-	</div>
-
 
     <div class="container mt" id="img">
       <div class="row">
-	    <div class="twelve columns center">
+	    <div class="grid-12 center">
           <h4>Grid showcase, responsive images</h4>
         </div>
       </div>
     </div>
     <div class="container">
       <div class="row">
-        <div class="six columns">
+        <div class="grid-6">
             <img class="responsiveimg" src="http://resources.ludvig.xyz/placeholder.svg">
         </div>
-        <div class="three columns">
+        <div class="grid-3">
             <img class="responsiveimg" src="http://resources.ludvig.xyz/placeholder.svg">
         </div>
-        <div class="two columns">
+        <div class="grid-2">
             <img class="responsiveimg" src="http://resources.ludvig.xyz/placeholder.svg">
         </div>
-        <div class="one columns">
+        <div class="grid-1">
             <img class="responsiveimg" src="http://resources.ludvig.xyz/placeholder.svg">
         </div>
       </div>
 	</div>
     <div class="container mt">
       <div class="row">
-	    <div class="twelve columns center">
+	    <div class="grid-12 center">
           <p>Use <code>class=&quot;img-responsive&quot;</code> <i>or</i> <code>class=&quot;img-responsive-max&quot;</code>.<br>-max means that the image will NOT be stretched out.</p>
         </div>
       </div>
@@ -157,14 +147,14 @@
 
      <div class="container mt" id="style">
       <div class="row">
-	    <div class="twelve columns center">
+	    <div class="grid-12 center">
           <h4>Style showcase</h4>
         </div>
       </div>
     </div>
     <div class="container mt">
       <div class="row">
-	    <div class="twelve columns">
+	    <div class="grid-12">
           <h1>Heading 1</h1>
           <h2>Heading 2</h2>
 		  <h3>Heading 3</h3>
@@ -173,7 +163,6 @@
           <a class="underline">Link underline</a><br>
 		  <p>When the lights go out, it's nobody's business what goes on between two consenting adults. Yep, I remember. They came in last at the Olympics, then retired to promote alcoholic beverages! Stop! Don't shoot fire stick in space canoe! Cause explosive decompression!<br>I'm a thing. Who said that? SURE you can die! You want to die?! Oh, I always feared he might run off like this. Why, why, why didn't I break his legs? Leela, Bender, we're going grave robbing.<br><span class="lead">Lead</span><br>Hey! I'm a porno-dealing monster, what do I care what you think? Fry, you can't just sit here in the dark listening to classical music. We can't compete with Mom! <b>Her company is big and evil!</b> Ours is small and neutral! I don't want to be rescued. Wow! A superpowers drug you can just rub onto your skin? You'd think it would be something you'd have to freebase. Yep, I remember. They came in last at the Olympics, then retired to promote alcoholic beverages!<br></br><a>Read more...</a><br></p>
           <blockquote><h4>Blockquote:</h4>“If, For Any Reason You’re Not Satisfied, I Hate You.”<br>– Sales Clerk</blockquote>
-          <a class="btn" data-popup--open="popup-1" href="#">Popup (requires motus.js)</a><br>
           <a class="btn">Button</a><br>
           <a class="btn primary">Button Primary</a><br>
           <a class="btn info">Button Info</a><br>
@@ -186,7 +175,7 @@
 
     <div class="container mt mb" id="form">
       <div class="row">
-	    <div class="six offset-by-three columns">
+	    <div class="grid-12">
           <h4 class="center">Form style</h4>
             <form action="">
               First name:<br>
@@ -226,7 +215,7 @@
 
     <div class="container mt mb" id="list">
       <div class="row">
-	    <div class="twelve columns">
+	    <div class="grid-12">
           <h4>List style</h4>
             <p>using <code>&lt;ul/dl/ol&gt; and &lt;li&gt;</code></p>
             <ul>
@@ -271,7 +260,7 @@
 
     <div class="container mt mb" id="table">
       <div class="row">
-	    <div class="twelve columns">
+	    <div class="grid-12">
           <h4>Table Style</h4>
             <table style="width:100%">
               <tr>
@@ -325,7 +314,7 @@
 
     <div class="container mt mb" id="bg">
       <div class="row">
-	    <div class="twelve columns">
+	    <div class="grid-12">
           <h4>BG Structure</h4>
           <p>Use an extra div around your container with <code>class="bg &#36;color"</code> where &#36;color is the class of your <code>background-color</code><br></br>Motus comes standard with <code>.black</code> and <code>.grey</code></p>
         <p class="lead">Customization example:</p>
@@ -341,7 +330,7 @@
   <div class="bg black">
     <div class="container">
       <div class="row">
-	    <div class="twelve columns">
+	    <div class="grid-12">
           <h4>BG Style</h4>
           <p class="muted">BG Black Muted text</p>
         </div>
@@ -353,7 +342,7 @@
   <div class="bg gray">
     <div class="container">
       <div class="row">
-	    <div class="twelve columns">
+	    <div class="grid-12">
           <h4>BG Style</h4>
           <p class="muted">BG Grey Muted text</p>
         </div>
@@ -361,36 +350,9 @@
 	</div>
   </div>
 
-<div class="container mt">
-  <div class="row">
-    <div class="eight offset-by-two columns card">
-        <h4>Card</h4>
-        <p class="muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-  </div>
-</div>
-
-<div class="container mt">
-  <div class="row">
-    <div class="eight offset-by-two columns card low">
-        <h4>Card low</h4>
-        <p class="muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-  </div>
-</div>
-
-<div class="container mt">
-  <div class="row">
-    <div class="eight offset-by-two columns card high">
-        <h4>Card high</h4>
-        <p class="muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-  </div>
-</div>
-
     <div class="container mt mb">
       <div class="row">
-	    <div class="twelve columns">
+	    <div class="grid-12">
           <h4>Fullscreen video</h4>
             <a href="video.html">Demo</a><br></br>
           <p class="lead">.video-container</p>
@@ -398,18 +360,6 @@
         </div>
       </div>
 	</div>
-
-  <!--////////////////////////////////////////////////-->
-  <!--////////////////////MODALS//////////////////////-->
-  <!--////////////////////////////////////////////////-->
-
-  <div data-popup="popup-1" class="popup">
-    <div class="popup-container">
-      <h4>Popup</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <div class="right"><a data-popup--close="popup-1" href="#">Close</a></div>
-    </div>
-  </div>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

@@ -1,5 +1,3 @@
-# motus
-
 ![Motus UX](http://resources.ludvig.xyz/img/logo.png)
 
 Using http://git.io/normalize
@@ -11,12 +9,9 @@ Download the css folder to your project and use the following code in the 'head'
 <link rel="stylesheet" href="css/motus.min.css">
 ```
 
-If you want a wider grid *(1280px)*, put the following *after* loading motus.min.css:
-
-```
-<link rel="stylesheet" href="css/motus@1280.min.css">
-```
+Now with more Sass variables to adjust grid width, column count and more with ease.
 
 # docs
 
 [Official website](http://resources.ludvig.xyz/)
+[Docs](http://resources.ludvig.xyz/docs)
