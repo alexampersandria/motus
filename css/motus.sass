@@ -1,13 +1,21 @@
 //COLOR PALLETE
 
-$blue--color: #00aaff
-$blue-hover--color: #288ccc
+$blue--color: #347fef
+$blue-hover--color: #1f59af
 
-$green--color: #5ebc4a
-$green-hover--color: #5b964e
+$green--color: #44c55c
+$green-hover--color: #329a45
 
-$red--color: #e74149
-$red-hover--color: #af4448
+$red--color: #f53542
+$red-hover--color: #b6333c
+
+$body-color: #000
+
+$grey: #eee
+
+$dark-grey: #aaa
+
+$light-grey: #d1d1d1
 
 $grid-columns: 12
 
@@ -18,7 +26,6 @@ $grid-margin: 20px
     float: left
     display: inline-block
     width: 100%
-    background-color: $blue--color
     min-height: 20px
     padding: 0
     margin: 0
@@ -29,6 +36,12 @@ $grid-margin: 20px
         width: calc(100% / #{$grid-columns} * #{$i} - #{$grid-margin})
         margin: calc(#{$grid-margin} / 2)
 
+.preload *
+  -webkit-transition: none !important
+  -moz-transition: none !important
+  -ms-transition: none !important
+  -o-transition: none !important
+  transition: none !important
 
 //SASS
 
@@ -45,7 +58,7 @@ body
   font-size: 1.2rem
   font-weight: 400
   font-family: Roboto, "Roboto", "Source sans pro", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif
-  color: #222
+  color: $body-color
 
 h1, h2, h3, h4, h5, h6
   margin-top: 0
@@ -121,11 +134,11 @@ h6
     background-color: #000
     color: #fff
   &.black .muted, &.bg-black .muted, &.black .text-muted, &.bg-black .text-muted
-    color: #aaa
+    color: $grey
   &.gray, &.bg-gray, &.grey, &.bg-grey
-    background-color: #888
+    background-color: $grey
   &.gray .muted, &.bg-gray .muted, &.grey .muted, &.bg-grey .muted, &.gray .text-muted, &.bg-gray .text-muted, &.grey .text-muted, &.bg-grey .text-muted
-    color: #444
+    color: $dark-grey
 
 .img-responsive, .responsiveimg
   display: block
@@ -176,7 +189,7 @@ a
   &.underline
     border-bottom: 1px solid $blue--color
     &:hover
-      border-bottom: 1px solid #222
+      border-bottom: 1px solid $body-color
   &.pseudo
     color: #fff
     text-decoration: none
@@ -190,7 +203,7 @@ a
     border-bottom: 1px solid rgba(255, 255, 255, 1)
 
 .muted, .text-muted
-  color: #777
+  color: $dark-grey
 
 .lead
   font-size: 1.8rem
@@ -229,8 +242,8 @@ a
   display: inline-block
   height: 38px
   padding: 0 30px
-  color: #fff
-  background-color: #000
+  color: $body-color
+  background-color: #fff
   text-align: center
   font-size: 1.2rem
   font-weight: 400
@@ -242,14 +255,15 @@ a
   border: none
   cursor: pointer
   box-sizing: border-box
+  box-shadow: INSET 0 0 0 1px rgba(0,0,0,0.1)
 
 fieldset, hr
   border-width: 0
 
 .btn, .button
   &:focus, &:hover
-    color: #fff
-    background-color: rgba(0, 0, 0, 0.5)
+    color: $body-color
+    background-color: $grey
 
 select.half, input.half
   width: 49.5%
@@ -381,7 +395,7 @@ input
     height: 38px
     padding: 6px 10px
     background-color: #fff
-    border: 1px solid #D1D1D1
+    border: 1px solid $light-grey
     border-radius: 5px
     box-shadow: none
     box-sizing: border-box
@@ -390,7 +404,7 @@ select, textarea
   height: 38px
   padding: 6px 10px
   background-color: #fff
-  border: 1px solid #D1D1D1
+  border: 1px solid $light-grey
   border-radius: 5px
   box-shadow: none
   box-sizing: border-box
@@ -430,7 +444,7 @@ blockquote
   margin-left: 0
   padding-left: 1.5rem
   line-height: 3rem
-  border-left: 5px solid #eee
+  border-left: 4px solid $light-grey
 
 input
   &[type=checkbox], &[type=radio]
@@ -490,7 +504,7 @@ ul
 
 ul.muted li, .muted li, ul.muted-list li, .muted-list li
   list-style: none
-  color: #777
+  color: $dark-grey
 
 .btn, btn, li
   margin-bottom: 1rem

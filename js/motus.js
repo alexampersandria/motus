@@ -1,3 +1,6 @@
+$(window).load(function() {
+  $('body').removeClass('preload');
+});
 $(function() {
     //----- OPEN
     $('[data-popup--open]').on('click', function(e)  {

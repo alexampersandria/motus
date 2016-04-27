@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,8 +21,8 @@
 
   <!-- MOTUS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="http://resources.ludvig.xyz/normalize.css">
-    <link rel="stylesheet" href="../motus.css">
+  <link rel="stylesheet" href="../css//normalize.css">
+  <link rel="stylesheet" href="../css/motus.min.css">
 
    <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -39,33 +35,20 @@
   <link href="http://www.ludvig.xyz/images/favicon.ico" rel="icon" />
   <link href="http://www.ludvig.xyz/images/favicon.png" sizes="192x192" rel="icon" />
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src='../js/motus.js'></script>
+
 </head>
 <body>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-   <div class="container mt">
-      <div class="row">
-	    <div class="grid-12 center">
-            <h2>JavaScript resources coming soon!</h2>
-        </div>
-      </div>
-	</div>
-
-  <div class="container mt">
-      <div class="row">
-	    <div class="grid-12 center">
-          <a href="http://ludvig.xyz/" class="btn"><i class="fa fa-chevron-left"></i> Back to ludvig.xyz</a>
-        </div>
-      </div>
-	</div>
-
     <div class="container mt">
       <div class="row">
 	    <div class="grid-12 center">
           <h1><b>motus.css</b></h1>
           <p>Fully responsive CSS framework for the modern web. Resize your browser to experience responsive magic!<br><span class="muted"><i class="fa fa-code"></i> with <i class="fa fa-heart-o"></i> in Denmark.</p></span>
-            <p><a class="btn primary" href="http://resources.ludvig.xyz/changelog">Changelog</a></p>
+            <p><a href="http://resources.ludvig.xyz/" class="btn"><i class="fa fa-chevron-left"></i> Back to resources.ludvig.xyz</a></p>
         </div>
       </div>
     </div>
@@ -163,6 +146,7 @@
           <a class="underline">Link underline</a><br>
 		  <p>When the lights go out, it's nobody's business what goes on between two consenting adults. Yep, I remember. They came in last at the Olympics, then retired to promote alcoholic beverages! Stop! Don't shoot fire stick in space canoe! Cause explosive decompression!<br>I'm a thing. Who said that? SURE you can die! You want to die?! Oh, I always feared he might run off like this. Why, why, why didn't I break his legs? Leela, Bender, we're going grave robbing.<br><span class="lead">Lead</span><br>Hey! I'm a porno-dealing monster, what do I care what you think? Fry, you can't just sit here in the dark listening to classical music. We can't compete with Mom! <b>Her company is big and evil!</b> Ours is small and neutral! I don't want to be rescued. Wow! A superpowers drug you can just rub onto your skin? You'd think it would be something you'd have to freebase. Yep, I remember. They came in last at the Olympics, then retired to promote alcoholic beverages!<br></br><a>Read more...</a><br></p>
           <blockquote><h4>Blockquote:</h4>“If, For Any Reason You’re Not Satisfied, I Hate You.”<br>– Sales Clerk</blockquote>
+          <a class="btn" data-popup--open="popup-1" href="#">Popup (requires motus.js)</a><br>
           <a class="btn">Button</a><br>
           <a class="btn primary">Button Primary</a><br>
           <a class="btn info">Button Info</a><br>
@@ -360,6 +344,18 @@
         </div>
       </div>
 	</div>
+
+  <!--////////////////////////////////////////////////-->
+  <!--////////////////////MODALS//////////////////////-->
+  <!--////////////////////////////////////////////////-->
+
+  <div data-popup="popup-1" class="popup">
+    <div class="popup-container">
+      <h4>Popup</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class="right"><a data-popup--close="popup-1" href="#">Close</a></div>
+    </div>
+  </div>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
