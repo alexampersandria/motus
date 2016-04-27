@@ -145,17 +145,54 @@
           <a>Link</a><br>
           <a class="underline">Link underline</a><br>
 		  <p>When the lights go out, it's nobody's business what goes on between two consenting adults. Yep, I remember. They came in last at the Olympics, then retired to promote alcoholic beverages! Stop! Don't shoot fire stick in space canoe! Cause explosive decompression!<br>I'm a thing. Who said that? SURE you can die! You want to die?! Oh, I always feared he might run off like this. Why, why, why didn't I break his legs? Leela, Bender, we're going grave robbing.<br><span class="lead">Lead</span><br>Hey! I'm a porno-dealing monster, what do I care what you think? Fry, you can't just sit here in the dark listening to classical music. We can't compete with Mom! <b>Her company is big and evil!</b> Ours is small and neutral! I don't want to be rescued. Wow! A superpowers drug you can just rub onto your skin? You'd think it would be something you'd have to freebase. Yep, I remember. They came in last at the Olympics, then retired to promote alcoholic beverages!<br></br><a>Read more...</a><br></p>
-          <blockquote><h4>Blockquote:</h4>“If, For Any Reason You’re Not Satisfied, I Hate You.”<br>– Sales Clerk</blockquote>
-          <a class="btn" data-popup--open="popup-1" href="#">Popup (requires motus.js)</a><br>
+          <blockquote><p class="lead">Blockquote:</p>“If, For Any Reason You’re Not Satisfied, I Hate You.”<br>– Sales Clerk</blockquote>
+          <blockquote class="blockquote-thin"><p class="lead">Blockquote thin</p></blockquote>
           <a class="btn">Button</a><br>
           <a class="btn primary">Button Primary</a><br>
           <a class="btn info">Button Info</a><br>
           <a class="btn error">Button Error</a><br>
           <p><a class="btn round"><i class="fa fa-heart fa-2x"></i></a> Button Round</p>
+          <p class="lead">Popups (requires motus.js):</p>
+          <a class="btn" data-popup--open="popup-1" href="#">Default Popup</a><br>
+          <a class="btn" data-popup--open="popup-2" href="#">Plain Popup</a><br>
+          <p class="lead" id="pagination">Pagination, button-group:</p>
+          <div class="pagination">
+            <a>1</a>
+            <a class="active">2</a>
+            <a>3</a>
+            <a class="disabled">..</a>
+            <a>42</a>
+          </div>
+          <div class="pagination">
+            <a>First</a>
+            <a>1</a>
+            <a>2</a>
+            <a>3</a>
+            <a>4</a>
+            <a>5</a>
+            <a>6</a>
+            <a>7</a>
+            <a>8</a>
+            <a>9</a>
+            <a>Last</a>
+          </div>
+          <div class="button-group">
+            <a><i class="fa fa-print"></i></a>
+            <a>Button 2</a>
+            <a>Button 3</a>
+          </div>
+          <p class="lead" id="label">Labels:</p>
+          <p>Motus labels:<br>
+            <span class="label">default</span>, <span class="label blue">blue</span>, <span class="label green">green</span>, <span class="label red">red</span>, <span class="label black">black</span>,
+          <br></br>Modifiers:<br>
+            <span class="label text-l">text-l</span>, <span class="label border">border</span>
+          <br></br>red + text-l + border:<br>
+            <span class="label red text-l border">Important!</span>
+          </p>
+          </p>
         </div>
       </div>
 	</div>
-
 
     <div class="container mt mb" id="form">
       <div class="row">
@@ -354,6 +391,14 @@
       <h4>Popup</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <div class="right"><a data-popup--close="popup-1" href="#">Close</a></div>
+    </div>
+  </div>
+
+  <div data-popup="popup-2" class="popup">
+    <div class="popup-container-plain">
+      <h4>Plain Popup</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <a class="btn red" data-popup--close="popup-2" href="#">Close</a>
     </div>
   </div>
 
