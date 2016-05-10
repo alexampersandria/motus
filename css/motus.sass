@@ -41,6 +41,8 @@ $border-pl: rgba(0,0,0,0.1)
       .grid-#{$i}
         width: calc(100% / #{$grid-columns} * #{$i} - #{$grid-margin})
         margin: calc(#{$grid-margin} / 2)
+      .offset-#{$i}
+        margin-left: calc(100% / #{$grid-columns} * #{$i} - #{$grid-margin} + #{$grid-margin / 2}) !important
 
 .preload *
   -webkit-transition: none !important
@@ -270,6 +272,9 @@ fieldset, hr
   &:focus, &:hover
     color: $body-color
     background-color: $grey
+  &.disabled
+    cursor: not-allowed
+    opacity: .5
 
 select.half, input.half
   width: 49.5%
@@ -410,9 +415,11 @@ input
   margin: 0 4px
   background-color: $grey
   border-radius: 4px
-  padding: 2px 4px 3px 4px
+  padding: 2px 4px
   font-size: 1rem
   color: $light-body-color
+  position: relative
+  top: -1px
   &.text-l
     font-size: 1.2rem
   &.border
