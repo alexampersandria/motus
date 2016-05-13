@@ -17,7 +17,9 @@ $grey: #eee
 
 $dark-grey: #aaa
 
-$dark-grey-alt: #d1d1d1
+$medium-grey: #d1d1d1
+
+$light-grey: #f7f7f7
 
 $grid-columns: 12
 
@@ -53,6 +55,14 @@ $border-pl: rgba(0,0,0,0.1)
 
 //SASS
 
+//TEXT
+
+body
+  font-size: 1.2rem
+  font-weight: 400
+  font-family: Roboto, "Roboto", "Source sans pro", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif
+  color: $body-color
+
 h1, h2, h3
   letter-spacing: -0.1rem
 
@@ -61,12 +71,6 @@ body, h6
 
 html
   font-size: 12px
-
-body
-  font-size: 1.2rem
-  font-weight: 400
-  font-family: Roboto, "Roboto", "Source sans pro", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif
-  color: $body-color
 
 h1, h2, h3, h4, h5, h6
   margin-top: 0
@@ -118,6 +122,49 @@ h6
     z-index: 9999
     width: 100%
 
+.thin
+  font-weight: 300
+
+.thick, b, .fat
+  font-weight: 700
+
+code
+  font-family: 'Source Code Pro'
+  color: #888
+  padding: .5rem
+  background-color: $light-grey
+  border: none
+
+code
+  margin: 0 .2rem
+  border-radius: 4px
+  font-size: 90%
+  white-space: nowrap
+
+code pre, pre.code, pre code
+  padding: 2rem
+  color: #888
+  border-left: 5px #ddd solid
+  transition-duration: 0.5s
+  background-color: $light-grey
+  &:hover, .blue
+    border-left: 5px $blue--color solid
+
+.right
+  text-align: right
+
+.left
+  text-align: left
+
+.justify, .justify-p p
+  text-align: justify
+
+.caps
+  text-transform: uppercase
+
+
+//CONTAINERS
+
 .bg, .container, .nav
   position: relative
 
@@ -147,43 +194,6 @@ h6
   &.gray, &.bg-gray, &.grey, &.bg-grey
     background-color: $grey
   &.gray .muted, &.bg-gray .muted, &.grey .muted, &.bg-grey .muted, &.gray .text-muted, &.bg-gray .text-muted, &.grey .text-muted, &.bg-grey .text-muted
-    color: $dark-grey
-
-.img-responsive, .responsiveimg
-  display: block
-  width: 100%
-  height: auto
-
-.max-img-responsive, .img-responsive-max, .responsiveimgmax
-  display: block
-  max-width: 100%
-  height: auto
-
-.centerimg, .img-center
-  display: block
-  margin-left: auto
-  margin-right: auto
-
-video.fullscreen
-  position: fixed
-  top: 50%
-  left: 50%
-  transform: translate(-50%, -50%)
-  min-width: 100%
-  min-height: 100%
-  width: auto
-  height: auto
-  z-index: 1
-  &.absolute
-    position: absolute
-
-.video-container
-  height: 100vh
-  .container
-    z-index: 2
-    position: relative
-    color: #fff
-    padding-top: 40vh
 
 p
   margin-top: 0
@@ -222,6 +232,47 @@ a
   margin: 0 auto
   padding: 0 0
   box-sizing: border-box
+    color: $dark-grey
+
+//IMAGES AND VIDEO
+
+.img-responsive, .responsiveimg
+  display: block
+  width: 100%
+  height: auto
+
+.max-img-responsive, .img-responsive-max, .responsiveimgmax
+  display: block
+  max-width: 100%
+  height: auto
+
+.centerimg, .img-center
+  display: block
+  margin-left: auto
+  margin-right: auto
+
+video.fullscreen
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  min-width: 100%
+  min-height: 100%
+  width: auto
+  height: auto
+  z-index: 1
+  &.absolute
+    position: absolute
+
+.video-container
+  height: 100vh
+  .container
+    z-index: 2
+    position: relative
+    color: #fff
+    padding-top: 40vh
+
+//PADDING AND MARGIN MODIFIERS
 
 .padding-bottom, .pt
   padding-top: 1.25rem
@@ -246,170 +297,7 @@ a
   float: left
   box-sizing: border-box
 
-.btn, button, input[type=btn], input[type=reset], input[type=submit]
-  display: inline-block
-  height: 38px
-  padding: 0 30px
-  color: $body-color
-  background-color: #fff
-  text-align: center
-  font-size: 1.2rem
-  font-weight: 400
-  line-height: 38px
-  letter-spacing: .1rem
-  text-decoration: none
-  white-space: nowrap
-  border-radius: 4px
-  border: none
-  cursor: pointer
-  box-sizing: border-box
-  box-shadow: INSET 0 0 0 1px $border-pl
-
-fieldset, hr
-  border-width: 0
-
-.btn, .button
-  &:focus, &:hover
-    color: $body-color
-    background-color: $grey
-  &.disabled
-    cursor: not-allowed
-    opacity: .5
-
-select.half, input.half
-  width: 49.5%
-
-@media (min-width: 550px)
-  input.half, select.half
-    width: 48%
-
-@media (min-width: 961px)
-  input.half, select.half
-    width: 49.5%
-
-.btn, .button
-  &.green, &.info
-    color: #fff
-    background-color: $green--color
-    outline: 0
-
-input[type=submit]
-  color: #fff
-  background-color: $green--color
-  outline: 0
-
-.btn, .button
-  &.green
-    &:focus, &:hover
-      color: #fff
-      background-color: $green-hover--color
-      outline: 0
-  &.info
-    &:focus, &:hover
-      color: #fff
-      background-color: $green-hover--color
-      outline: 0
-
-input[type=submit]
-  &:focus, &:hover
-    color: #fff
-    background-color: $green-hover--color
-    outline: 0
-
-.btn
-  &.error, &.red, &.warning
-    color: #fff
-    background-color: $red--color
-    border-color: $red-hover--color
-    outline: 0
-
-.button
-  &.error, &.red, &.warning
-    color: #fff
-    background-color: $red--color
-    border-color: $red-hover--color
-    outline: 0
-
-.btn, .button
-  &.error
-    &:focus, &:hover
-      color: #fff
-      background-color: $red-hover--color
-      outline: 0
-  &.red
-    &:focus, &:hover
-      color: #fff
-      background-color: $red-hover--color
-      outline: 0
-  &.warning
-    &:focus, &:hover
-      color: #fff
-      background-color: $red-hover--color
-      outline: 0
-
-.btn.round, .button.round
-  border-radius: 9999rem
-  text-align: center
-  padding: 8px 0 0 2px
-  font-size: 11px
-  height: 50px
-  width: 50px
-  margin-right: 6px
-  margin-left: 6px
-  color: #FFF
-  background-color: $blue--color
-
-.btn.round > i, .button.round > i
-  transform: translateY(-1.8rem)
-
-.btn.round:before, .button.round:before
-  content: ''
-  padding: 50% 0
-  display: inline-block
-
-.btn.round:hover, .button.round:hover
-  background-color: $blue-hover--color
-
-div
-  &.share, &.social
-    text-align: right
-    padding-right: 1rem
-
-.btn-primary, .btn.primary, .button-primary, .button.primary, input[type=btn].btn-primary, input[type=reset].btn-primary, input[type=submit].btn-primary
-  color: #FFF
-  background-color: $blue--color
-
-.btn, .button
-  &.btn-primary
-    &:focus, &:hover
-      color: #FFF
-      background-color: $blue-hover--color
-  &.primary
-    &:focus, &:hover
-      color: #FFF
-      background-color: $blue-hover--color
-
-input
-  &[type=btn].btn-primary
-    &:focus, &:hover
-      color: #FFF
-      background-color: $blue-hover--color
-  &[type=reset].btn-primary
-    &:focus, &:hover
-      color: #FFF
-      background-color: $blue-hover--color
-  &[type=submit].btn-primary
-    &:focus, &:hover
-      color: #FFF
-      background-color: $blue-hover--color
-  &[type=email], &[type=number], &[type=password], &[type=search], &[type=tel], &[type=text], &[type=url]
-    height: 38px
-    padding: 6px 10px
-    background-color: #fff
-    border: 1px solid $dark-grey-alt
-    border-radius: 4px
-    box-shadow: none
-    box-sizing: border-box
+//LABEL
 
 .label
   margin: 0 4px
@@ -435,20 +323,55 @@ input
   &.blue, &.black, &.green, &.red
     color: #fff
 
-select, textarea
+//BUTTONS AND INPUTS
+
+.btn, button, input[type=btn], input[type=reset], input[type=submit]
+  display: inline-block
+  height: 38px
+  padding: 0 30px
+  color: $body-color
+  background-color: #fff
+  line-height: 38px
+  border-radius: 4px
+  border: none
+  cursor: pointer
+  box-sizing: border-box
+  box-shadow: INSET 0 0 0 1px $border-pl
+  &:hover, &:focus, &:active
+    background-color: $light-grey
+    color: $body-color
+  &.primary, &.btn-primary, &.green
+    color: #fff
+    background-color: $blue--color
+    border-color: darken($blue--color, 8)
+    &:hover
+      background-color: $blue-hover--color
+      border-color: darken($blue-hover--color, 8)
+  &.info, &.btn-info, &.green
+    color: #fff
+    background-color: $green--color
+    border-color: darken($green--color, 8)
+    &:hover
+      background-color: $green-hover--color
+      border-color: darken($green-hover--color, 8)
+  &.error, &.btn-error, &.red
+    color: #fff
+    background-color: $red--color
+    border-color: darken($red--color, 8)
+    &:hover
+      background-color: $red-hover--color
+      border-color: darken($red-hover--color, 8)
+  &.round, &.rounded, &.btn-round, &.btn-rounded
+    border-radius: 9999px
+
+textarea
   height: 38px
   padding: 6px 10px
   background-color: #fff
-  border: 1px solid $dark-grey-alt
+  border: 1px solid $border-pl
   border-radius: 4px
   box-shadow: none
   box-sizing: border-box
-
-input
-  &[type=email], &[type=number], &[type=password], &[type=search], &[type=tel], &[type=text], &[type=url]
-    -webkit-appearance: none
-    -moz-appearance: none
-    appearance: none
 
 textarea
   -webkit-appearance: none
@@ -459,13 +382,44 @@ textarea
   padding-bottom: 6px
 
 input
-  &[type=email]:focus, &[type=number]:focus, &[type=password]:focus, &[type=search]:focus, &[type=tel]:focus, &[type=text]:focus, &[type=url]:focus
-    border: 1px solid $blue--color
+  &.input-left
+    width: 100%
+  &.input-right
+    width: 80px
+    position: absolute
+    top: 22px
+    left: 82%
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+    padding: 0
+  &[type=email], &[type=number], &[type=password], &[type=search], &[type=tel], &[type=text], &[type=url]
+    border: 1px solid $border-pl
+    padding: 4px
     outline: 0
+    border-radius: 4px
+    &:focus
+      border: 1px solid $blue--color
+      box-shadow: 0 0 16px transparentize($blue--color, 0.5)
+  &[type=email], &[type=number], &[type=password], &[type=search], &[type=tel], &[type=text], &[type=url]
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+  &[type=checkbox], &[type=radio]
+    display: inline
+  &.wide
+    width: 100%
 
-select:focus, textarea:focus
-  border: 1px solid $blue--color
+form.wide input
+  width: 100%
+
+select, textarea
   outline: 0
+  border: 1px solid $border-pl
+  padding: 3px
+  border-radius: 4px
+  &:focus
+    border: 1px solid $blue--color
+    box-shadow: 0 0 16px transparentize($blue--color, 0.5)
 
 label, legend
   display: block
@@ -479,30 +433,9 @@ blockquote
   margin-left: 0
   padding-left: 1.5rem
   line-height: 3rem
-  border-left: 4px solid $dark-grey-alt
+  border-left: 4px solid $medium-grey
   &.thin, &.blockquote-thin
     border-width: 2px
-
-input
-  &[type=checkbox], &[type=radio]
-    display: inline
-  &.wide
-    width: 100%
-
-form.wide input
-  width: 100%
-
-input
-  &.input-left
-    width: 100%
-  &.input-right
-    width: 80px
-    position: absolute
-    top: 22px
-    left: 82%
-    border-top-left-radius: 0
-    border-bottom-left-radius: 0
-    padding: 0
 
 @media (min-width: 550px)
   input.input-right
@@ -511,6 +444,8 @@ input
 label > .label-body
   display: inline-block
   margin-left: 0.5rem
+
+//LISTS AND TABLES
 
 ul
   list-style: circle inside
@@ -546,19 +481,8 @@ ul.muted li, .muted li, ul.muted-list li, .muted-list li
 .btn, btn, li
   margin-bottom: 1rem
 
-.thin
-  font-weight: 300
-
-.thick, b, .fat
-  font-weight: 700
-
-pre > code
-  display: block
-  padding: 1rem 1.5rem
-  white-space: pre
-
 .stripes tr:nth-child(odd), .striped tr:nth-child(odd)
-  background-color: #F7F7F7
+  background-color: $light-grey
 
 .stripes tr:nth-child(1), .striped tr:nth-child(1)
   border-top: 1px solid #E1E1E1
@@ -579,20 +503,6 @@ fieldset, input, select, textarea
 
 blockquote, dl, figure, form, ol, p, pre, table, ul
   margin-bottom: 2.5rem
-
-.u-full-width
-  width: 100%
-  box-sizing: border-box
-
-.u-max-full-width
-  max-width: 100%
-  box-sizing: border-box
-
-.u-pull-right
-  float: right
-
-.u-pull-left
-  float: left
 
 hr
   margin-top: 3rem
@@ -648,37 +558,7 @@ hr
   a
     color: $light-body-color
 
-code, pre
-  font-family: 'Source Code Pro'
-  color: #888
-  padding: .5rem
-  background-color: #f7f7f7
-  border: none
-
-code
-  margin: 0 .2rem
-  border-radius: 4px
-  font-size: 90%
-  white-space: nowrap
-
-pre
-  padding: 2rem
-  border-left: 5px #ddd solid
-  transition-duration: 0.5s
-  &:hover, .blue
-    border-left: 5px $blue--color solid
-
-.right
-  text-align: right
-
-.left
-  text-align: left
-
-.justify, .justify-p p
-  text-align: justify
-
-.caps
-  text-transform: uppercase
+//POPUPS
 
 .popup
   width: 100%
@@ -708,7 +588,7 @@ pre
     padding-bottom: 20px
   div:last-child
     padding: 32px 40px 31px 40px
-    background-color: #f7f7f7
+    background-color: $light-grey
     width: calc(100% + 0px)
     position: relative
     left: -40px

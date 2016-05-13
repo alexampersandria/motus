@@ -58,7 +58,7 @@
 	    <div class="grid-12" style="margin-top: 6rem;">
           <h2>Initialize motus from <a href="http://resources.ludvig.xyz/">resources.ludvig.xyz</a></h2>
           <p>Put the following code in the <code>&lt;head&gt;</code> tag of your document to load motus.</p>
-		  <pre>&lt;link rel="stylesheet" href="http://resources.ludvig.xyz/normalize.css"&gt;<br>&lt;link rel="stylesheet" href="http://resources.ludvig.xyz/motus.min.css"&gt;</pre>
+		  <pre class="code">&lt;link rel="stylesheet" href="http://resources.ludvig.xyz/normalize.css"&gt;<br>&lt;link rel="stylesheet" href="http://resources.ludvig.xyz/motus.min.css"&gt;</pre>
         </div>
       </div>
 	</div>
@@ -67,7 +67,7 @@
         <div class="row">
         <div class="grid-12">
             <h4 class="center">Grid structure</h4>
-            <pre>&lt;div class="container"&gt;<br/>&ensp; &lt;div class="row"&gt;<br/>&ensp; &ensp; &lt;div class="grid-12"&gt;<br/>&ensp; &ensp; &ensp; &lt;h2&gt;Heading&lt;/h2&gt;<br/>&ensp; &ensp; &ensp; &lt;p&gt;This is a text field&lt;/p&gt;<br/>&ensp; &ensp; &lt;/div&gt;<br/>&ensp; &lt;/div&gt;<br/>&lt;/div&gt;</pre>
+            <pre class="code">&lt;div class="container"&gt;<br/>&ensp; &lt;div class="row"&gt;<br/>&ensp; &ensp; &lt;div class="grid-12"&gt;<br/>&ensp; &ensp; &ensp; &lt;h2&gt;Heading&lt;/h2&gt;<br/>&ensp; &ensp; &ensp; &lt;p&gt;This is a text field&lt;/p&gt;<br/>&ensp; &ensp; &lt;/div&gt;<br/>&ensp; &lt;/div&gt;<br/>&lt;/div&gt;</pre>
           </div>
         </div>
     </div>
@@ -75,23 +75,29 @@
     <div class="container mt" id="grid">
       <div class="row">
 	    <div class="grid-12 center">
-          <h4>Grid showcase, numbers represent column width; 1-12</h4>
+          <h4>Grid showcase</h4>
         </div>
       </div>
     </div>
     <div class="container">
-      <div class="row">
+      <div class="row center">
         <div class="grid-6">
-            <pre>6</pre>
+            <p style="background-color: #347fef; color: #fff; padding: 20px;">grid-6</p>
         </div>
         <div class="grid-3">
-            <pre>3</pre>
+            <p style="background-color: #347fef; color: #fff; padding: 20px;">grid-3</p>
         </div>
         <div class="grid-2">
-            <pre>2</pre>
+            <p style="background-color: #347fef; color: #fff; padding: 20px;">grid-2</p>
         </div>
         <div class="grid-1">
-            <pre>1</pre>
+            <p style="background-color: #347fef; color: #fff; padding: 20px;">grid-1</p>
+        </div>
+        <div class="grid-12">
+            <p style="background-color: #347fef; color: #fff; padding: 20px;">grid-12</p>
+        </div>
+        <div class="grid-6 offset-3">
+            <p style="background-color: #347fef; color: #fff; padding: 20px;">grid-6 offset-3</p>
         </div>
       </div>
 	</div>
@@ -151,7 +157,8 @@
           <a class="btn primary">Button Primary</a><br>
           <a class="btn info">Button Info</a><br>
           <a class="btn error">Button Error</a><br>
-          <p><a class="btn round"><i class="fa fa-heart fa-2x"></i></a> Button Round</p>
+          <a class="btn rounded">Button Rounded</a><br>
+          <a class="btn primary rounded">Button Primary Rounded</a><br>
           <p class="lead">Popups (requires motus.js):</p>
           <a class="btn" data-popup--open="popup-1" href="#">Default Popup</a><br>
           <a class="btn" data-popup--open="popup-2" href="#">Plain Popup</a><br>
@@ -217,11 +224,11 @@
               <br><br>
               <input type="submit" value="Submit">
             </form>
-        <h4 class="center">Form style half</h4>
+        <h4 class="center">Form style select</h4>
             <form action="">
               First name:<br>
-              <input class="half" type="text" name="firstname" value="Mickey">
-              <select class="half" name="tourney">
+              <input type="text" name="firstname" value="Mickey">
+              <select name="tourney">
                 <option value="BRDTNS16">Bordtennis</option>
                 <option value="SMSHBR16">Smash Bros</option>
                 <option value="MROKRT16">Mario Kart</option>
@@ -339,7 +346,7 @@
           <h4>BG Structure</h4>
           <p>Use an extra div around your container with <code>class="bg &#36;color"</code> where &#36;color is the class of your <code>background-color</code><br></br>Motus comes standard with <code>.black</code> and <code>.grey</code></p>
         <p class="lead">Customization example:</p>
-        <pre>
+        <pre class="code">
 .bg.red {
   background-color: #ff0000;
 }
