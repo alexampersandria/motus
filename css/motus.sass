@@ -394,12 +394,11 @@ input
     padding: 0
   &[type=email], &[type=number], &[type=password], &[type=search], &[type=tel], &[type=text], &[type=url]
     border: 1px solid $border-pl
-    padding: 4px
+    padding: 6px 8px
     outline: 0
     border-radius: 4px
     &:focus
       border: 1px solid $blue--color
-      box-shadow: 0 0 16px transparentize($blue--color, 0.5)
   &[type=email], &[type=number], &[type=password], &[type=search], &[type=tel], &[type=text], &[type=url]
     -webkit-appearance: none
     -moz-appearance: none
@@ -410,16 +409,16 @@ input
     width: 100%
 
 form.wide input
-  width: 100%
+  &[type=email], &[type=number], &[type=password], &[type=search], &[type=tel], &[type=text], &[type=url]
+    width: 100%
 
 select, textarea
   outline: 0
   border: 1px solid $border-pl
-  padding: 3px
+  padding: 5px 7px
   border-radius: 4px
   &:focus
     border: 1px solid $blue--color
-    box-shadow: 0 0 16px transparentize($blue--color, 0.5)
 
 label, legend
   display: block
@@ -532,7 +531,7 @@ hr
   a
     border: 1px solid $border-pl
     border-right: none
-    border-radius: 0 solid transparent
+    border-radius: 0
     margin: -2px
     padding: 6px 12px
     &:first-child
@@ -554,6 +553,18 @@ hr
       color: #fff
       &:hover
         background-color: $blue-hover--color
+  &.rounded
+    a
+      &:first-child
+        border-top-left-radius: 9999px
+        border-bottom-left-radius: 9999px
+        padding-left: 18px
+      &:last-child
+        border-right: 1px solid $border-pl
+        border-top-right-radius: 9999px
+        border-bottom-right-radius: 9999px
+        padding-right: 18px
+
 .button-group
   a
     color: $light-body-color
