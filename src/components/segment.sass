@@ -1,0 +1,32 @@
+@import ../config
+
+.segment
+  position: relative
+  margin: $segment-margin
+  padding: $segment-padding 0
+  &:not(.basic):not(.vertical)
+    border-radius: $border-radius
+    padding: $segment-padding
+    background-color: $clr-white
+    border: 1px solid $clr-grey-300
+  &.vertical
+    border-bottom: 1px solid $clr-grey-300
+  &.attached
+    &:not(.top):not(.bottom)
+      border-top-left-radius: 0
+      border-top-right-radius: 0
+      border-bottom-left-radius: 0
+      border-bottom-right-radius: 0
+      border-bottom: none
+      margin-top: 0
+      margin-bottom: 0
+    &.top
+      border-bottom-left-radius: 0
+      border-bottom-right-radius: 0
+      border-bottom: none
+      margin-bottom: 0
+    &.bottom
+      border-top-left-radius: 0
+      border-top-right-radius: 0
+      margin-top: 0
+      & + .segment
