@@ -2,12 +2,14 @@
 
 $clr-red-list: $clr-red-50, $clr-red-100, $clr-red-200, $clr-red-300, $clr-red-400, $clr-red-500, $clr-red-600, $clr-red-700, $clr-red-800, $clr-red-900
 $clr-orange-list: $clr-orange-50, $clr-orange-100, $clr-orange-200, $clr-orange-300, $clr-orange-400, $clr-orange-500, $clr-orange-600, $clr-orange-700, $clr-orange-800, $clr-orange-900
+$clr-amber-list: $clr-amber-50, $clr-amber-100, $clr-amber-200, $clr-amber-300, $clr-amber-400, $clr-amber-500, $clr-amber-600, $clr-amber-700, $clr-amber-800, $clr-amber-900
 $clr-green-list: $clr-green-50, $clr-green-100, $clr-green-200, $clr-green-300, $clr-green-400, $clr-green-500, $clr-green-600, $clr-green-700, $clr-green-800, $clr-green-900
 $clr-blue-list: $clr-blue-50, $clr-blue-100, $clr-blue-200, $clr-blue-300, $clr-blue-400, $clr-blue-500, $clr-blue-600, $clr-blue-700, $clr-blue-800, $clr-blue-900
 $clr-purple-list: $clr-purple-50, $clr-purple-100, $clr-purple-200, $clr-purple-300, $clr-purple-400, $clr-purple-500, $clr-purple-600, $clr-purple-700, $clr-purple-800, $clr-purple-900
 
+
 $clr-color-list: $clr-red-list, $clr-orange-list, $clr-green-list, $clr-blue-list, $clr-purple-list
-$hue-list: red, orange, green, blue, purple
+$hue-list: red, orange, yellow, green, blue, purple
 
 @function color-map($color-list, $value)
   @if $value == 50
@@ -38,6 +40,8 @@ $hue-list: red, orange, green, blue, purple
     @return color-map($clr-red-list, $value)
   @if $hue == orange
     @return color-map($clr-orange-list, $value)
+  @if $hue == yellow or $hue == amber
+    @return color-map($clr-amber-list, $value)
   @if $hue == green
     @return color-map($clr-green-list, $value)
   @if $hue == blue
