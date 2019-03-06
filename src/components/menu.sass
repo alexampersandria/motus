@@ -1,6 +1,12 @@
 @import ../config
 
 .menu
+  &:not(.basic):not(.vertical)
+    border-radius: $border-radius
+    background-color: $clr-white
+    border: 1px solid $clr-grey-300
+  &.vertical
+    border-bottom: 1px solid $clr-grey-300
   .item
     display: inline-block
     padding: $menu-item-padding
