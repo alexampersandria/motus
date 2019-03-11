@@ -1,0 +1,21 @@
+@import ../config
+@import label
+
+form
+  display: flex
+  align-items: flex-start
+  input, textarea
+    min-width: $input-min-width
+    padding: $input-padding 
+    border-radius: $input-radius
+    border: 1px solid $clr-grey-300
+    &:focus
+      outline: none
+      border-color: $clr-grey-400
+    &:not(:last-child)
+      margin-right: $input-spacing
+  &:not(.inline)
+    flex-direction: column
+    input, textarea
+      &:not(:last-child)
+        margin-bottom: $input-spacing
