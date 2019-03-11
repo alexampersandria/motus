@@ -1,0 +1,13 @@
+@import ../config
+
+.breadcrumb
+  display: inline-block
+  &:after
+    color: $clr-grey-300
+    content: '/'
+    padding: 0 $breadcrumb-spacing
+  &:last-child
+    &:after
+      content: none
+  &.active
+    font-weight: bold
