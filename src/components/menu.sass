@@ -2,14 +2,19 @@
 
 .menu
   &:not(.basic):not(.vertical)
-    border-radius: $border-radius
     background-color: $clr-white
-    border: 1px solid $clr-grey-300
+    box-shadow: 0 0 0 1px $clr-grey-300
+  &.detatched
+    border-radius: $border-radius
   &.vertical
     border-bottom: 1px solid $clr-grey-300
   .item
     display: inline-block
     padding: $menu-item-padding
-  &:not(.basic)
-    border: 1px solid $clr-grey-200
-    box-sizing: border-box
+  &.divided
+    display: flex
+    .item
+      color: $text-color
+      border-right: 1px solid $clr-grey-300
+    a.item:hover
+      background-color: $clr-grey-100
