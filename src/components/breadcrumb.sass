@@ -2,12 +2,9 @@
 
 .breadcrumb
   display: inline-block
-  &:after
+  &:not(:last-child):after
     color: $clr-grey-300
     content: '/'
     padding: 0 $breadcrumb-spacing
-  &:last-child
-    &:after
-      content: none
   &.active
     font-weight: bold
