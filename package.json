@@ -21,6 +21,6 @@
     "gulp": "^4.0.0",
     "gulp-sass": "^4.0.2",
     "merge-stream": "^1.0.1",
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.13.0"
   }
 }
