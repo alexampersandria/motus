@@ -1,0 +1,35 @@
+@import ../config
+@import dimmer
+
+.loader
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  text-align: center
+  display: none
+  .dimmer.active &, &.active
+    display: block
+  &:before
+    content: ""
+    display: block
+    border-radius: 50%
+    height: $loader-size
+    width: $loader-size
+    border: $loader-width solid $clr-grey-300
+    border-top: $loader-width solid $clr-grey
+    animation-name: spin
+    animation-timing-function: linear
+    animation-duration: $loader-speed
+    animation-iteration-count: infinite
+  &.slow
+    &:before
+      animation-direction: reverse
+      animation-duration: $loader-speed * 2
+
+
+@keyframes spin
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)

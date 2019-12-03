@@ -1,0 +1,26 @@
+{
+  "name": "motus",
+  "version": "2.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server --watch=dist,index.html --wait=1000 --port=3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ludvigbruchmann/motus.git"
+  },
+  "author": "Ludvig Alexander Brüchmann (ludvigbruchmann@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ludvigbruchmann/motus/issues"
+  },
+  "homepage": "https://github.com/ludvigbruchmann/motus#readme",
+  "dependencies": {
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "merge-stream": "^1.0.1",
+    "node-sass": "^4.13.0"
+  }
+}

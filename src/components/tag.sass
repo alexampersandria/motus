@@ -1,0 +1,39 @@
+@import ../config
+
+.tag
+  display: inline-block
+  font-size: .6825rem
+  font-weight: 500
+  border: none
+  background-color: $clr-grey-200
+  color: $clr-grey-700
+  padding: $tag-padding
+  border-radius: $tag-radius
+  &.round
+    border-radius: 9999px
+  &.bordered
+    border: 1px solid $clr-grey-300
+    padding: $tag-bordered-padding
+  &.disabled
+    cursor: not-allowed
+    opacity: 0.5
+  &.black
+    background-color: $clr-black
+    color: $clr-white
+    &.bordered
+      border-color: $clr-black
+  &.white
+    background-color: $clr-white
+    &.bordered
+      border-color: $clr-grey-300
+  @each $hue in $hue-list
+    &.#{$hue}
+      background-color: color($hue, 50)
+      color: color($hue, 500)
+      &.bordered
+        border: 1px solid color($hue, 100)
+      &.solid
+        background-color: color($hue, 500)
+        color: $clr-white
+        &.bordered
+          border-color: color($hue, 700)

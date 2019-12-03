@@ -1,0 +1,94 @@
+@import ../config
+
+button, .button
+  font-weight: 500
+  border: none
+  background-color: $clr-grey-200
+  color: $clr-grey-700
+  padding: $button-padding
+  border-radius: $button-radius
+  &:focus
+    outline: none
+  &:hover:not(.disabled)
+    background-color: darken($clr-grey-200, $button-hover-darken)
+    color: $clr-grey-700
+  &:active:not(.disabled)
+    background-color: darken($clr-grey-200, $button-active-darken)
+  &.round
+    border-radius: 9999px
+  &.bordered
+    border: 1px solid $clr-grey-300
+    padding: $button-bordered-padding
+    &:hover:not(.disabled)
+      border-color: darken($clr-grey-300, $button-hover-darken)
+    &:active:not(.disabled)
+      border-color: darken($clr-grey-300, $button-active-darken)
+  &.disabled
+    cursor: not-allowed
+    opacity: 0.5
+  &.black
+    background-color: $clr-black
+    color: $clr-white
+    &:hover:not(.disabled)
+      background-color: lighten($clr-black, $button-hover-darken * 2)
+      color: $clr-white
+    &:active:not(.disabled)
+      background-color: lighten($clr-black, $button-active-darken * 2)
+    &.bordered
+      border-color: $clr-black
+  &.white
+    background-color: $clr-white
+    &:hover:not(.disabled)
+      background-color: darken($clr-white, $button-hover-darken)
+    &:active:not(.disabled)
+      background-color: darken($clr-white, $button-active-darken)
+    &.bordered
+      border-color: $clr-grey-300
+      &:hover:not(.disabled)
+        border-color: darken($clr-grey-300, $button-hover-darken)
+      &:active:not(.disabled)
+        border-color: darken($clr-grey-300, $button-active-darken)
+  @each $hue in $hue-list
+    &.#{$hue}
+      background-color: color($hue, 50)
+      color: color($hue, 500)
+      &:hover:not(.disabled)
+        background-color: darken(color($hue, 50), $button-hover-darken)
+        color: darken(color($hue, 500), $button-hover-darken)
+      &:active:not(.disabled)
+        background-color: darken(color($hue, 50), $button-active-darken)
+        color: darken(color($hue, 500), $button-hover-darken)
+      &.bordered
+        border: 1px solid color($hue, 100)
+        &:hover:not(.disabled)
+          border-color: darken(color($hue, 100), $button-hover-darken)
+        &:active:not(.disabled)
+          border-color: darken(color($hue, 100), $button-active-darken)
+      &.solid
+        background-color: color($hue, 500)
+        color: $clr-white
+        &:hover:not(.disabled)
+          background-color: darken(color($hue, 500), $button-hover-darken)
+          color: $clr-white
+        &:active:not(.disabled)
+          background-color: darken(color($hue, 500), $button-active-darken)
+          color: $clr-white
+        &.bordered
+          border-color: color($hue, 700)
+          &:hover:not(.disabled)
+            border-color: darken(color($hue, 700), $button-hover-darken)
+          &:active:not(.disabled)
+            border-color: darken(color($hue, 700), $button-active-darken)
+
+.buttons
+  display: flex
+  button, .button
+    border-radius: 0
+    &:first-child
+      border-top-left-radius: $button-radius
+      border-bottom-left-radius: $button-radius
+    &:last-child
+      border-top-right-radius: $button-radius
+      border-bottom-right-radius: $button-radius
+    &.bordered:not(:first-child)
+      border-left: 0

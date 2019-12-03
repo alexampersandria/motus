@@ -1,0 +1,30 @@
+@import ../config
+
+blockquote
+  margin: 0
+  margin-block-start: 1rem
+  margin-block-start: 1rem
+  padding-inline-start: 2rem
+  padding-inline-end: 1rem
+  &.line
+    border-inline-start: $blockquote-border
+  &.quote
+    &::before
+      position: absolute
+      font-size: 4rem
+      content: "“"
+      left: 0
+      top: -1rem
+      font-family: fantasy
+    &::after
+      position: absolute
+      font-size: 4rem
+      content: "”"
+      right: 0
+      bottom: -1rem
+      font-family: fantasy
+  footer
+    &::before
+      content: "\2014"
+      padding-inline-start: 1rem
+      padding-inline-end: 4px

@@ -1,0 +1,34 @@
+@import ../config
+
+body
+  background-color: $page-background
+
+*
+  font-family: $page-font
+  font-size: $font-size
+  color: $text-color
+  line-height: $line-height
+
+a
+  color: $clr-blue
+  text-decoration: none
+  &:hover
+    color: $clr-blue-400
+  &.underline
+    border-bottom: 1px solid $clr-blue-200
+  &.dotted
+    border-bottom: 1px dotted $clr-blue-200
+  &.underline, &.dotted
+    &:hover
+      border-color: $clr-blue-400
+
+.justified
+  text-align: justify
+
+.aligned
+  &.left
+    text-align: left
+  &.center
+    text-align: center
+  &.right
+    text-align: right

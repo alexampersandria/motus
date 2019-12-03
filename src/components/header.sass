@@ -1,0 +1,13 @@
+@import ../config
+
+h1,h2,h3,h4,h5,h6, .header, .sub.header
+  font-family: $header-font
+  font-weight: 700
+
+h6, .sub.header
+  text-transform: uppercase
+  font-size: nth($h, 6)
+
+@for $i from 1 through 5
+  h#{$i}
+    font-size: nth($h, $i)
