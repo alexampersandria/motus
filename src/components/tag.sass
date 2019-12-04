@@ -37,3 +37,73 @@
         color: $clr-white
         &.bordered
           border-color: color($hue, 700)
+
+a.tag
+  &:focus
+    outline: none
+  &:focus:not(.disabled)
+    box-shadow: $tag-focus
+  &:hover:not(.disabled)
+    background-color: darken($clr-grey-200, $tag-hover-darken)
+    color: $clr-grey-700
+  &:active:not(.disabled)
+    background-color: darken($clr-grey-200, $tag-active-darken)
+  &.round
+    border-radius: 9999px
+  &.bordered
+    &:hover:not(.disabled)
+      border-color: darken($clr-grey-300, $tag-hover-darken)
+    &:active:not(.disabled)
+      border-color: darken($clr-grey-300, $tag-active-darken)
+  &.disabled
+    cursor: not-allowed
+    opacity: 0.5
+  &.black
+    &:hover:not(.disabled)
+      background-color: lighten($clr-black, $tag-hover-darken * 2)
+      color: $clr-white
+    &:active:not(.disabled)
+      background-color: lighten($clr-black, $tag-active-darken * 2)
+    &.bordered
+      border-color: $clr-black
+  &.white
+    &:hover:not(.disabled)
+      background-color: darken($clr-white, $tag-hover-darken)
+    &:active:not(.disabled)
+      background-color: darken($clr-white, $tag-active-darken)
+    &.bordered
+      border-color: $clr-grey-300
+      &:hover:not(.disabled)
+        border-color: darken($clr-grey-300, $tag-hover-darken)
+      &:active:not(.disabled)
+        border-color: darken($clr-grey-300, $tag-active-darken)
+  @each $hue in $hue-list
+    &.#{$hue}
+      &:focus:not(.disabled)
+        box-shadow: $focus color($hue, 100)
+      &:hover:not(.disabled)
+        background-color: darken(color($hue, 50), $tag-hover-darken)
+        color: darken(color($hue, 500), $tag-hover-darken)
+      &:active:not(.disabled)
+        background-color: darken(color($hue, 50), $tag-active-darken)
+        color: darken(color($hue, 500), $tag-hover-darken)
+      &.bordered
+        border: 1px solid color($hue, 100)
+        &:hover:not(.disabled)
+          border-color: darken(color($hue, 100), $tag-hover-darken)
+        &:active:not(.disabled)
+          border-color: darken(color($hue, 100), $tag-active-darken)
+      &.solid
+        &:focus:not(.disabled)
+          box-shadow: $focus color($hue, 200)
+        &:hover:not(.disabled)
+          background-color: darken(color($hue, 500), $tag-hover-darken)
+          color: $clr-white
+        &:active:not(.disabled)
+          background-color: darken(color($hue, 500), $tag-active-darken)
+          color: $clr-white
+        &.bordered
+          &:hover:not(.disabled)
+            border-color: darken(color($hue, 700), $tag-hover-darken)
+          &:active:not(.disabled)
+            border-color: darken(color($hue, 700), $tag-active-darken)

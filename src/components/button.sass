@@ -9,6 +9,8 @@ button, .button
   border-radius: $button-radius
   &:focus
     outline: none
+  &:focus:not(.disabled)
+    box-shadow: $button-focus
   &:hover:not(.disabled)
     background-color: darken($clr-grey-200, $button-hover-darken)
     color: $clr-grey-700
@@ -52,6 +54,8 @@ button, .button
     &.#{$hue}
       background-color: color($hue, 50)
       color: color($hue, 500)
+      &:focus:not(.disabled)
+        box-shadow: $focus color($hue, 100)
       &:hover:not(.disabled)
         background-color: darken(color($hue, 50), $button-hover-darken)
         color: darken(color($hue, 500), $button-hover-darken)
@@ -67,6 +71,8 @@ button, .button
       &.solid
         background-color: color($hue, 500)
         color: $clr-white
+        &:focus:not(.disabled)
+          box-shadow: $focus color($hue, 200)
         &:hover:not(.disabled)
           background-color: darken(color($hue, 500), $button-hover-darken)
           color: $clr-white
@@ -84,6 +90,9 @@ button, .button
   display: flex
   button, .button
     border-radius: 0
+    &:focus:not(.disabled)
+      position: relative
+      z-index: 100
     &:first-child
       border-top-left-radius: $button-radius
       border-bottom-left-radius: $button-radius
