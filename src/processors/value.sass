@@ -1,0 +1,10 @@
+@import ../config 
+
+// CREDIT:
+// https://css-tricks.com/snippets/sass/strip-unit-function/
+
+@function value($number)
+  @if type-of($number) == 'number' and not unitless($number)
+    @return $number / ($number * 0 + 1)
+
+  @return $number

@@ -1,4 +1,8 @@
 @import ../config
+@import ../processors/value
+
+@function calcContainerBreakpoint($v1, $v2)
+  @return value($v1) + value($v2) * value($font-size) + px
 
 .container
   width: 100%
@@ -9,3 +13,14 @@
 @media (max-width: $container-width)
   .container
     padding: 0 $segment-padding
+
+@media (min-width: calcContainerBreakpoint($container-width, $container-margin) )
+  .container
+    &.left
+      margin-left: $container-margin
+    &.right
+      margin-right: $container-margin
+    &.start
+      margin-inline-start: $container-margin
+    &.end
+      margin-inline-end: $container-margin
