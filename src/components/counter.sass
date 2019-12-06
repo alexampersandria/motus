@@ -1,0 +1,15 @@
+@import ../config
+
+.counter
+  display: inline-block
+  text-align: center
+  padding: $counter-padding
+  &:first-of-type
+    padding-left: 0
+  &:last-of-type
+    padding-right: 0
+  .value
+    font-size: 2rem
+    font-weight: 700
+  .label
+    font-size: 1rem
