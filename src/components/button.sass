@@ -32,6 +32,8 @@ button, .button
   &.black
     background-color: $clr-black
     color: $clr-white
+    &:focus:not(.disabled)
+      box-shadow: $button-black-focus
     &:hover:not(.disabled)
       background-color: lighten($clr-black, $button-hover-darken * 2)
       color: $clr-white
@@ -41,6 +43,8 @@ button, .button
       border-color: $clr-black
   &.white
     background-color: $clr-white
+    &:focus:not(.disabled)
+      box-shadow: $button-white-focus
     &:hover:not(.disabled)
       background-color: darken($clr-white, $button-hover-darken)
     &:active:not(.disabled)

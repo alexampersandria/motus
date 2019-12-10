@@ -59,6 +59,8 @@ a.tag
     cursor: not-allowed
     opacity: 0.5
   &.black
+    &:focus:not(.disabled)
+      box-shadow: $button-black-focus
     &:hover:not(.disabled)
       background-color: lighten($clr-black, $tag-hover-darken * 2)
       color: $clr-white
@@ -67,6 +69,8 @@ a.tag
     &.bordered
       border-color: $clr-black
   &.white
+    &:focus:not(.disabled)
+      box-shadow: $button-white-focus
     &:hover:not(.disabled)
       background-color: darken($clr-white, $tag-hover-darken)
     &:active:not(.disabled)
