@@ -10,17 +10,17 @@ body
   line-height: $line-height
 
 a
-  color: $clr-blue
+  color: $a-color
   text-decoration: none
   &:hover
-    color: $clr-blue-400
+    color: $a-color-hover
   &.underline
-    border-bottom: 1px solid $clr-blue-200
+    border-bottom: 1px solid $a-underline-color
   &.dotted
-    border-bottom: 1px dotted $clr-blue-200
+    border-bottom: 1px dotted $a-underline-color
   &.underline, &.dotted
     &:hover
-      border-color: $clr-blue-400
+      border-color: $a-color-hover
   &:focus
     outline: 0
     box-shadow: $a-focus

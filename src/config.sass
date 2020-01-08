@@ -3,27 +3,45 @@
 // BASE
 
 $page-font : -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol
-$header-font : $page-font
 $font-size : 14px
-$page-background: $clr-grey-50
-$line-height: 1.6875
-$text-color: $clr-grey-900
-$muted-text-color: $clr-grey-500
+$header-font : $page-font
 $h: 2.25rem, 2rem, 1.75rem, 1.5rem, 1.25rem, 0.85rem
+$line-height: 1.6875
+
 $container-width: 1100px
 $container-margin: 4rem
 $border-radius: 5px
+
 $generic-border: 1px solid $clr-grey-300
+$page-background: $clr-grey-50
+$text-color: $clr-grey-900
+$muted-text-color: $clr-grey-500
 
 // SEGMENT
 
+$segment-bg: $clr-white
 $segment-padding: 14px
 $segment-spacing: 14px
 $segment-margin: $segment-spacing 0
 
+// ANCHOR / LINK
+
 $focus: 0 0 0 4px //box-shadow
 
+$a-color: $clr-blue
+$a-color-hover: $clr-blue-400
 $a-focus: $focus $clr-blue-100
+$a-underline-color: $clr-blue-200
+
+$breadcrumb-color: $clr-grey-300
+
+// CARD
+
+$card-bg: $clr-white
+
+// DIMMER
+
+$dimmer-bg: $clr-white
 
 // SPACER
 
@@ -35,14 +53,35 @@ $blockquote-border: 4px solid $clr-grey-300
 
 // BUTTON
 
+$button-bg-default: $clr-grey-200
+$button-color-default: $clr-grey-700
+$button-border-default: $clr-grey-300
+$button-focus: $focus $clr-grey-300
+
+$button-bg-black: $clr-black
+$button-color-black: $clr-white
+$button-border-black: $clr-grey-900
+$button-black-focus: $focus $clr-grey-400
+
+$button-bg-white: $clr-white
+$button-border-white: $button-border-default
+$button-white-focus: $focus $clr-grey-200
+
+$button-bg-hue: 50
+$button-color-hue: 500
+$button-border-hue: 100
+$button-focus-hue: 100
+
+$button-bg-hue-solid: 500
+$button-color-hue-solid: $clr-white
+$button-border-hue-solid: 200
+$button-focus-hue-solid: 200
+
 $button-padding: 10px 14px
 $button-bordered-padding: 9px 13px
 $button-radius: $border-radius
 $button-hover-darken: 3
 $button-active-darken: $button-hover-darken * 2
-$button-focus: $focus $clr-grey-300 //only for non colored buttons
-$button-white-focus: $focus $clr-grey-200
-$button-black-focus: $focus $clr-grey-400
 
 // TAG
 
@@ -55,7 +94,10 @@ $tag-focus: $button-focus
 
 // MENU
 
+$menu-bg: $clr-white
+$menu-border: $clr-grey-300
 $menu-item-padding: $button-padding
+$menu-item-hover: $clr-grey-100
 
 // BREADCRUMB
 
@@ -70,6 +112,8 @@ $input-spacing: 6px
 $input-radius: $border-radius
 $input-min-width: 200px
 
+$input-focus: $clr-grey-400
+
 // FORM > LABEL
 
 $label-font-size: nth($h, 6)
@@ -79,6 +123,9 @@ $label-font-size: nth($h, 6)
 $loader-size: 24px
 $loader-speed: 0.5s
 $loader-width: 3px
+
+$loader-color: $clr-grey
+$loader-bg: $clr-grey-300
 
 // CARD
 
