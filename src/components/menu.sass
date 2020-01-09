@@ -18,3 +18,17 @@
       border-right: $generic-border
     a.item:hover
       background-color: $menu-item-hover
+
+.dark
+  .menu
+    &:not(.basic):not(.vertical)
+      background-color: $dark-menu-bg
+      box-shadow: 0 0 0 1px $dark-menu-border
+    &.vertical
+      border-bottom: $dark-generic-border
+    &.divided
+      .item
+        color: $dark-text-color
+        border-right: $dark-generic-border
+      a.item:hover
+        background-color: $dark-menu-item-hover

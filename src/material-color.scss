@@ -780,10 +780,12 @@ $clr-blue-grey-900: map-get($clr-blue-grey-list, "900");
 //
 
 $clr-black-list: (
-  "base": #000
+  "base": #000,
+  "alt": #121212
 );
 
 $clr-black: map-get($clr-black-list, "base");
+$clr-black-alt: map-get($clr-black-list, "alt");
 
 
 //

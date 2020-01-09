@@ -13,13 +13,14 @@ $container-margin: 4rem
 $border-radius: 5px
 
 $generic-border: 1px solid $clr-grey-300
-$dark-generic-border: 1px solid $clr-grey-700
+$dark-generic-border: 1px solid $clr-grey-800
 $page-background: $clr-grey-50
 $text-color: $clr-grey-900
 $muted-text-color: $clr-grey-500
 
-$dark-page-background: $clr-grey-900
+$dark-page-background: $clr-black-alt
 $dark-text-color: $clr-grey-50
+$dark-muted-text-color: $clr-grey-700
 
 $focus: 0 0 0 4px //box-shadow
 
@@ -80,12 +81,42 @@ $button-radius: $border-radius
 $button-hover-darken: 3
 $button-active-darken: $button-hover-darken * 2
 
+// CARD
+
+$card-bg: $clr-white
+$card-border-radius: $border-radius
+$card-border: $generic-border
+$card-box-shadow: none
+$card-width: 300px
+$card-padding: 1rem
+
+$dark-card-bg: $clr-grey-900
+$dark-card-border: $dark-generic-border
+
+// DIMMER
+
+$dimmer-bg: transparentize($clr-white, 0.15)
+$dark-dimmer-bg: transparentize($clr-grey-900, 0.15)
+
+// MENU
+
+$menu-bg: $clr-white
+$menu-border: $clr-grey-300
+$menu-item-padding: $button-padding
+$menu-item-hover: $clr-grey-100
+
+$dark-menu-bg: $clr-black
+$dark-menu-border: $clr-grey-800
+$dark-menu-item-hover: $clr-grey-900
+
 // SEGMENT
 
 $segment-bg: $clr-white
-$segment-padding: 14px
-$segment-spacing: 14px
+$segment-padding: 1rem
+$segment-spacing: 1rem
 $segment-margin: $segment-spacing 0
+
+$dark-segment-bg: $clr-grey-900
 
 // ANCHOR / LINK
 
@@ -98,15 +129,10 @@ $dark-a-color-hover: $clr-blue-600
 $dark-a-underline-color: $clr-blue-700
 $dark-a-focus: $focus transparentize($clr-blue-700, .5)
 
+// BREADCRUMB
+
 $breadcrumb-color: $clr-grey-300
-
-// CARD
-
-$card-bg: $clr-white
-
-// DIMMER
-
-$dimmer-bg: $clr-white
+$dark-breadcrumb-color: $clr-grey-700
 
 // SPACER
 
@@ -121,13 +147,6 @@ $tag-hover-darken: $button-hover-darken
 $tag-active-darken: $button-active-darken
 $tag-focus: $button-focus
 
-// MENU
-
-$menu-bg: $clr-white
-$menu-border: $clr-grey-300
-$menu-item-padding: $button-padding
-$menu-item-hover: $clr-grey-100
-
 // FORM
 
 // FORM > INPUT
@@ -138,6 +157,8 @@ $input-radius: $border-radius
 $input-min-width: 200px
 
 $input-focus: $clr-grey-400
+
+$dark-input-border: $clr-grey-800
 
 // FORM > LABEL
 
@@ -152,13 +173,8 @@ $loader-width: 3px
 $loader-color: $clr-grey
 $loader-bg: $clr-grey-300
 
-// CARD
-
-$card-border-radius: $border-radius
-$card-border: $generic-border
-$card-box-shadow: none
-$card-width: 300px
-$card-padding: $segment-padding
+$dark-loader-color: $clr-grey
+$dark-loader-bg: $clr-grey-700
 
 // IMG
 
