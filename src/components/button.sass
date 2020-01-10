@@ -162,15 +162,15 @@ button, .button
 
     @each $hue in $hue-list
       &.#{$hue}
-        background-color: darken(color($hue, $dark-button-bg-hue), $dark-button-bg-hue-darken)
+        background-color: color($hue, $dark-button-bg-hue)
         color: $dark-button-color
         &:focus:not(.disabled)
           box-shadow: $focus color($hue, $dark-button-focus-hue)
         &:hover:not(.disabled)
-          background-color: lighten(darken(color($hue, $dark-button-bg-hue), $dark-button-bg-hue-darken), $button-hover-darken)
+          background-color: lighten(color($hue, $dark-button-bg-hue), $button-hover-darken)
           color: $dark-button-color
         &:active:not(.disabled)
-          background-color: lighten(darken(color($hue, $dark-button-bg-hue), $dark-button-bg-hue-darken), $button-active-darken)
+          background-color: lighten(color($hue, $dark-button-bg-hue), $button-active-darken)
           color: $dark-button-color
         &.bordered
           border: 1px solid color($hue, $dark-button-border-hue)
