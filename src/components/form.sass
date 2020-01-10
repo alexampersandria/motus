@@ -1,5 +1,4 @@
 @import ../config
-@import label
 
 form
   display: flex
@@ -20,6 +19,9 @@ form
     input, textarea
       &:not(:last-child)
         margin-bottom: $input-spacing
+  label
+    font-weight: bold
+    font-size: $label-font-size
 
 .dark
   input, textarea
