@@ -27,6 +27,12 @@
       animation-direction: reverse
       animation-duration: $loader-speed * 2
 
+.dark
+  .loader
+    &:before
+      border: $loader-width solid $dark-loader-bg
+      border-top: $loader-width solid $dark-loader-color
+
 
 @keyframes spin
   0%

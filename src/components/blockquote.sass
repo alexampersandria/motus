@@ -28,3 +28,11 @@ blockquote
       content: "\2014"
       padding-inline-start: 1rem
       padding-inline-end: 4px
+
+.dark
+  blockquote
+    &.line
+      border-inline-start: $dark-blockquote-border
+    &.quote
+      &::before, &::after
+        color: $dark-muted-text-color

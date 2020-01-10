@@ -32,3 +32,11 @@
       & + .segment
   &.compact
     width: fit-content
+
+.dark
+  .segment
+    &:not(.basic):not(.vertical)
+      background-color: $dark-segment-bg
+      border: $dark-generic-border
+    &.vertical
+      border-bottom: $dark-generic-border

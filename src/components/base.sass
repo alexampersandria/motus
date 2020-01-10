@@ -53,3 +53,24 @@ a
 
 .muted
   color: $muted-text-color
+
+body.dark
+  background-color: $dark-page-background
+
+.dark
+  *
+    color: $dark-text-color
+
+  a
+    color: $a-color
+    &:hover
+      color: $dark-a-color-hover
+    &.underline, &.dotted
+      border-color: $dark-a-underline-color
+      &:hover
+        border-color: $dark-a-color-hover
+    &:focus
+      box-shadow: $dark-a-focus
+
+  .muted
+    color: $dark-muted-text-color

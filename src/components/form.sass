@@ -5,6 +5,7 @@ form
   display: flex
   align-items: flex-start
   input, textarea
+    background-color: transparent
     min-width: $input-min-width
     padding: $input-padding 
     border-radius: $input-radius
@@ -19,3 +20,7 @@ form
     input, textarea
       &:not(:last-child)
         margin-bottom: $input-spacing
+
+.dark
+  input, textarea
+    border-color: $dark-input-border
