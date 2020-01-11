@@ -1,0 +1,23 @@
+@import ../config
+
+.tabs
+  border-bottom: $tab-border
+  .tab
+    display: inline-block
+    padding: $tab-padding
+    transform: translateY(1px)
+    &.active
+      border-left: $tab-border
+      border-right: $tab-border
+      border-top: $tab-border
+      border-bottom: $tab-active-border-bottom
+      border-top-right-radius: $tab-border-radius
+      border-top-left-radius: $tab-border-radius
+
+.dark
+  .tabs
+    border-color: $dark-generic-border-color
+    .tab
+      border-color: $dark-generic-border-color
+      &.active
+        border-bottom: $dark-tab-active-border-bottom
