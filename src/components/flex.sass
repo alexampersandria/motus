@@ -2,5 +2,14 @@
 
 .flex
   display: flex
-  &.space.between
-    justify-content: space-between
+  &.space
+    &.between
+      justify-content: space-between
+    &.around
+      justify-content: space-around
+  &.wrap
+    flex-wrap: wrap
+    &.reverse
+      flex-wrap: wrap-reverse
+  &.nowrap
+    flex-wrap: nowrap
