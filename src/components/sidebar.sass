@@ -1,0 +1,36 @@
+@import '../config'
+
+.sidebar
+  position: fixed
+  max-width: 100%
+  width: $sidebar-width
+  height: 100%
+  background-color: $sidebar-bg
+  border-inline-end: $sidebar-border
+  top: 0
+  left: -$sidebar-width
+  transition-duration: .3s
+  z-index: 2
+  box-sizing: border-box
+  &.active
+    left: 0
+  .section
+    padding: $sidebar-padding !important
+    &:not(:first-of-type)
+      border-top: $sidebar-border
+    a.item
+      padding: 0
+  .menu
+    background-color: transparent !important
+    box-shadow: none !important
+    .item
+      border: none
+      display: block
+
+.dark
+  .sidebar
+    background-color: $dark-sidebar-bg
+    border-inline-end: $dark-sidebar-border
+    .section
+      &:not(:first-of-type)
+        border-top: $dark-sidebar-border
