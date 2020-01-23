@@ -2,17 +2,86 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kitchen Sink</title>
     <link rel="stylesheet" href="/dist/normalize.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="/dist/motus.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
+
+    <div class="navigation fixed">
+  
+      <div class="menu fixed">
+        <div class="container">
+          <div class="item"><div class="header">Motus Kitchen Sink</div></div>
+          <div class="inline-block float right">
+            <div class="item">
+              <a href="#" id="theme">Toggle Dark Mode</a>
+            </div>
+            <div class="item">
+              <a href="#" id="sidebar">Toggle Sidebar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar active">
+        <div class="section">
+          <div class="header">Motus</div>
+        </div>
+        <div class="section">
+          <div class="header">Kitchen Sink</div>
+          <div class="menu">
+            <a class="item" href="#text"> Text Elements </a>
+            <a class="item" href="#segment"> Segment </a>
+            <a class="item" href="#counter"> Counter </a>
+            <a class="item" href="#anchor"> Links and Buttons </a>
+            <a class="item" href="#tags"> Tags </a>
+            <a class="item" href="#breadcrumbs"> Breadcrumbs </a>
+            <a class="item" href="#tabs"> Tabs </a>
+            <a class="item" href="#menu"> Menu </a>
+            <a class="item" href="#form"> Form </a>
+            <a class="item" href="#loader"> Loader </a>
+            <a class="item" href="#card"> Card </a>
+          </div>
+        </div>
+        <div class="section">
+          <div class="header">
+            Sidebar
+          </div>
+          <div class="menu">
+            <a href="" class="item">Element</a>
+            <a href="" class="item">Element</a>
+            <a href="" class="item">Element</a>
+            <a href="" class="item">Element</a>
+          </div>
+        </div>
+        <div class="section">
+          <div class="header">
+            Sidebar
+          </div>
+          <div class="menu">
+            <a href="" class="item">Element</a>
+            <a href="" class="item">Element</a>
+            <a href="" class="item">Element</a>
+            <a href="" class="item">Element</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="center aligned vertical segment">
+      <div class="spacer quadruple"></div>
+      <h1>Motus 2.0 Kitchen Sink</h1>
+      <div class="spacer double"></div>
+    </div>
+
     <div class="container">
 
-      <div class="vertical center aligned segment">
-        <h1>Motus 2.0 Kitchen Sink</h1>
-        <a href="#" id="theme">Toggle Dark Mode</a>
-      </div>
+      
+
+      <h2 id="text" class="center aligned">Text Elements</h2>
 
       <div class="sub header">
         Headers
@@ -85,6 +154,8 @@
         </i>
       </p>
 
+      <h2 class="center aligned" id="segment">Segment</h2>
+
       <div class="sub header">
         Segment
       </div>
@@ -131,6 +202,8 @@
         </p>
       </div>
 
+      <h2 class="center aligned" id="counter">Counter</h2>
+
       <div class="sub header">
         Counter
       </div>
@@ -165,6 +238,8 @@
         </div>
 
       </div>
+
+      <h2 class="center aligned" id="anchor">Links and Buttons</h2>
 
       <div class="sub header">
         Links
@@ -278,6 +353,8 @@
         </div>  
       </div>
 
+      <h2 class="center aligned" id="tags">Tags</h2>
+
       <div class="sub header">
         Tags
       </div>
@@ -304,6 +381,8 @@
         <i>Tags are basically smaller buttons, they share color, border, and solid syntax.</i>
       </blockquote>
 
+      <h2 class="center aligned" id="breadcrumbs">Breadcrumbs</h2>
+
       <div class="sub header">
         Breadcrumbs
       </div>
@@ -320,9 +399,23 @@
           </div>
         </div>
       </div>
+
+      <h2 class="center aligned" id="tabs">Tabs</h2>
+
+      <div class="sub header">
+        Tabs
+      </div>
+      <div class="basic segment">
+        <div class="tabs">
+          <div class="tab">Tab 1</div><div class="tab active">Tab 2</div><div class="tab">Tab 3</div>
+        </div>
+      </div>
+
     </div>
 
     <div class="spacer"></div>
+
+    <h2 class="center aligned" id="menu">Menu</h2>
 
     <div class="container">
       <div class="sub header">
@@ -398,6 +491,8 @@
 
     <div class="spacer quadruple"></div>
 
+    <h2 class="center aligned" id="form">Form</h2>
+
     <div class="container">
       <div class="sub header">
         Form
@@ -414,6 +509,8 @@
         </form>
       </div>
 
+      <h2 class="center aligned" id="loader">Loader</h2>
+
       <div class="sub header">
         Loader
       </div>
@@ -426,6 +523,8 @@
           </div>
         </div>
       </div>
+
+      <h2 class="center aligned" id="card">Card</h2>
 
       <div class="sub header">
         Card
@@ -472,7 +571,8 @@
   </body>
 
   <script>
-    document.querySelector("#theme").onclick = function() {
+    document.querySelector("#theme").onclick = function(e) {
+      e.preventDefault()
 
       body = document.querySelector("body")
       
@@ -480,6 +580,19 @@
         body.classList.remove("dark")
       } else {
         body.classList.add("dark")
+      }
+
+    }
+
+    document.querySelector("#sidebar").onclick = function(e) {
+      e.preventDefault()
+
+      body = document.querySelector(".sidebar")
+      
+      if (body.classList.contains("active")) {
+        body.classList.remove("active")
+      } else {
+        body.classList.add("active")
       }
 
     }

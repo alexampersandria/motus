@@ -12,8 +12,11 @@ $container-width: 1100px
 $container-margin: 4rem
 $border-radius: 5px
 
-$generic-border: 1px solid $clr-grey-300
-$dark-generic-border: 1px solid $clr-grey-800
+$generic-border-color: $clr-grey-300
+$dark-generic-border-color: $clr-grey-800
+
+$generic-border: 1px solid $generic-border-color
+$dark-generic-border: 1px solid $dark-generic-border-color
 $page-background: $clr-grey-50
 $text-color: $clr-grey-900
 $muted-text-color: $clr-grey-500
@@ -24,6 +27,17 @@ $dark-muted-text-color: $clr-grey-700
 
 $focus: 0 0 0 4px //box-shadow
 
+// ANCHOR / LINK
+
+$a-color: $clr-blue
+$a-color-hover: $clr-blue-400
+$a-focus: $focus $clr-blue-100
+$a-underline-color: $clr-blue-200
+
+$dark-a-color-hover: $clr-blue-600
+$dark-a-underline-color: $clr-blue-700
+$dark-a-focus: $focus transparentize($clr-blue-700, .5)
+
 // BLOCKQUOTE
 
 $blockquote-border: 4px solid $clr-grey-300
@@ -32,6 +46,8 @@ $dark-blockquote-border: 4px solid $clr-grey-800
 // BREADCRUMB
 
 $breadcrumb-spacing: 4px
+$breadcrumb-color: $clr-grey-300
+$dark-breadcrumb-color: $clr-grey-700
 
 // BUTTON
 
@@ -92,20 +108,57 @@ $card-padding: 1rem
 $dark-card-bg: $clr-grey-900
 $dark-card-border: $dark-generic-border
 
+// COUNTER
+
+$counter-padding: 0 1rem
+
 // DIMMER
 
 $dimmer-bg: transparentize($clr-white, 0.15)
 $dark-dimmer-bg: transparentize($clr-grey-900, 0.15)
 
+// FORM
+
+// FORM > INPUT
+
+$input-padding: 11px 15px
+$input-spacing: 6px
+$input-radius: $border-radius
+$input-min-width: 200px
+
+$input-focus: $clr-grey-400
+
+$dark-input-border: $clr-grey-800
+
+// FORM > LABEL
+
+$label-font-size: nth($h, 6)
+
+// IMG
+
+$img-round-border-radius: $border-radius
+
+// LOADER
+
+$loader-size: 24px
+$loader-speed: 0.5s
+$loader-width: 3px
+
+$loader-color: $clr-grey
+$loader-bg: $clr-grey-300
+
+$dark-loader-color: $clr-grey
+$dark-loader-bg: $clr-grey-700
+
 // MENU
 
 $menu-bg: $clr-white
-$menu-border: $clr-grey-300
+$menu-border: $generic-border-color
 $menu-item-padding: $button-padding
 $menu-item-hover: $clr-grey-100
 
 $dark-menu-bg: $clr-black
-$dark-menu-border: $clr-grey-900
+$dark-menu-border: $dark-generic-border-color
 $dark-menu-item-hover: $clr-grey-900
 
 // SEGMENT
@@ -117,25 +170,19 @@ $segment-margin: $segment-spacing 0
 
 $dark-segment-bg: $clr-grey-900
 
-// ANCHOR / LINK
-
-$a-color: $clr-blue
-$a-color-hover: $clr-blue-400
-$a-focus: $focus $clr-blue-100
-$a-underline-color: $clr-blue-200
-
-$dark-a-color-hover: $clr-blue-600
-$dark-a-underline-color: $clr-blue-700
-$dark-a-focus: $focus transparentize($clr-blue-700, .5)
-
-// BREADCRUMB
-
-$breadcrumb-color: $clr-grey-300
-$dark-breadcrumb-color: $clr-grey-700
-
 // SPACER
 
 $spacer-height: 14px
+
+// TAB
+
+$tab-padding: 8px 14px
+$tab-border: $generic-border
+$tab-border-radius: $border-radius
+$tab-border-radius: $border-radius
+$tab-active-border-bottom: 1px solid $page-background
+$dark-tab-border: $dark-generic-border
+$dark-tab-active-border-bottom: 1px solid $dark-page-background
 
 // TAG
 
@@ -171,39 +218,12 @@ $dark-tag-color-hue-solid: $clr-white
 $dark-tag-border-hue-solid: 800
 $dark-tag-focus-hue-solid: 800
 
-// FORM
+// SIDEBAR
 
-// FORM > INPUT
+$sidebar-bg: $clr-white
+$sidebar-border: $generic-border
+$sidebar-padding: 1rem
+$sidebar-width: 300px
 
-$input-padding: 11px 15px
-$input-spacing: 6px
-$input-radius: $border-radius
-$input-min-width: 200px
-
-$input-focus: $clr-grey-400
-
-$dark-input-border: $clr-grey-800
-
-// FORM > LABEL
-
-$label-font-size: nth($h, 6)
-
-// LOADER
-
-$loader-size: 24px
-$loader-speed: 0.5s
-$loader-width: 3px
-
-$loader-color: $clr-grey
-$loader-bg: $clr-grey-300
-
-$dark-loader-color: $clr-grey
-$dark-loader-bg: $clr-grey-700
-
-// IMG
-
-$img-round-border-radius: $border-radius
-
-// COUNTER
-
-$counter-padding: 0 1rem
+$dark-sidebar-bg: $clr-black
+$dark-sidebar-border: $dark-generic-border
