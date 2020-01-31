@@ -11,3 +11,12 @@ h6, .sub.header
 @for $i from 1 through 5
   h#{$i}
     font-size: nth($h, $i)
+
+a
+  &.header, &.sub.header
+    color: $text-color
+
+.dark
+  a
+    &.header, &.sub.header
+      color: $dark-text-color
