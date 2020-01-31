@@ -13,6 +13,14 @@
     padding: $card-padding
   *:last-child
     margin-block-end: 0
+  margin-inline-end: $card-spacing
+  margin-block-end: $card-spacing
+  &.double
+    width: $card-width * 2 + $card-spacing
+  &.triple
+    width: $card-width * 3 + $card-spacing * 2
+  &.quadruple
+    width: $card-width * 4 + $card-spacing * 3
 
 .dark
   .card

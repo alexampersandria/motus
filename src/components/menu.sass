@@ -1,11 +1,22 @@
 @import ../config
 
 .menu
+  &.fixed-height
+    min-height: $menu-height
+    .item
+      line-height: $menu-height
+      height: $menu-height
+      white-space: nowrap
+      padding-top: 0 !important
+      padding-bottom: 0 !important
+      h1, h2, h3, h4, h5, h6, .header, .sub.header
+        display: inline-block
   &:not(.basic):not(.vertical)
     background-color: $menu-bg
-    box-shadow: 0 0 0 1px $menu-border
+    border-bottom: 1px solid $menu-border
   &.detatched
     border-radius: $border-radius
+    border: 1px solid $menu-border
   &.vertical
     border-bottom: $generic-border
   .item
@@ -24,11 +35,16 @@
     z-index: 1
     position: fixed
 
+.menu-offset
+  padding-block-start: $menu-height
+
 .dark
   .menu
     &:not(.basic):not(.vertical)
       background-color: $dark-menu-bg
-      box-shadow: 0 0 0 1px $dark-menu-border
+      border-bottom: 1px solid $dark-menu-border
+    &.detatched
+      border: 1px solid $dark-menu-border
     &.vertical
       border-bottom: $dark-generic-border
     &.divided

@@ -2,8 +2,11 @@
 
 .segment
   position: relative
-  margin: $segment-margin
+  margin: $segment-margin 0
   padding: $segment-padding 0
+  &.squeeze
+    margin: $segment-margin
+    padding: $segment-padding
   &:not(.basic):not(.vertical)
     border-radius: $border-radius
     padding: $segment-padding

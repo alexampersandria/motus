@@ -21,10 +21,14 @@
       padding: 0
   .menu
     background-color: transparent !important
-    box-shadow: none !important
+    border: none !important
     .item
       border: none
       display: block
+
+.sidebar-offset
+  &.active
+    margin-inline-start: $sidebar-width
 
 .dark
   .sidebar
