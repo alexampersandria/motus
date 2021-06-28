@@ -19,7 +19,7 @@
   "homepage": "https://github.com/ludvigbruchmann/motus#readme",
   "dependencies": {
     "gulp": "^4.0.2",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.0.0",
     "merge-stream": "^2.0.0",
     "node-sass": "^4.13.0"
   }
