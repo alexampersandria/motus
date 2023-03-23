@@ -6,8 +6,8 @@ Motus is a component based, lightweight, Sass framework.
 
 Installing and building
 
-```
-git clone https://github.com/ludvigbruchmann/motus.git
+```bash
+gh repo clone alexampersandria/motus
 npm install
 gulp build
 ```
@@ -16,7 +16,7 @@ Motus will be compiled to the `dist` directory.
 
 Running the dev server
 
-```
+```nash
 npm install -g live-server
 npm run dev
 ```
